@@ -208,7 +208,7 @@
 			animation: "fade",
 			controlNav: false,
 			directionNav: false,  
-			slideshowSpeed: 4000,   
+			slideshowSpeed: 8000,
 			animationSpeed: 800,  
 			start: function(slider){
 				$('body').removeClass('loading');

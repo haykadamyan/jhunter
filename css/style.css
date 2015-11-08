@@ -48,7 +48,7 @@ Tags: responsive, html5 template, one page, landing, startup, business, company,
 	background-size: 100%;
 }
 
-#intro { 
+#intro, #call-to-action {
 	background-image: url(../img/parallax_bg/intro_bkg.jpg);
 }
 
@@ -61,10 +61,6 @@ Tags: responsive, html5 template, one page, landing, startup, business, company,
 
 #features { 
 	background-image: url(../img/parallax_bg/features_bkg.jpg);  
-}
-
-#call-to-action { 
-	background-image: url(../img/parallax_bg/call_to_action_bkg.jpg); 
 }
 
 /*------------------------------------------*/
@@ -140,7 +136,12 @@ ul {
    ========================================================================== */ 
 
 /*------------------------------------------*/
-/*	 Logo Image    
+/*	 Logo Image*/
+#logo{
+	width: 95px;
+	position: relative;
+	top: -6px;
+}
 /*------------------------------------------*/
 
 .navbar-brand {
@@ -270,6 +271,10 @@ ul {
 	font-weight: 300;
     text-transform: uppercase;
     margin-bottom: 20px;
+}
+
+.form_register *{
+	color: #fff;
 }
 
 /*------------------------------------------*/
@@ -667,7 +672,6 @@ textarea {
 }
 
 #call-to-action h1 {
-	color: #fff;
 	font-size: 40px;
 	font-weight: 300;
 	padding: 0 15%;
@@ -675,7 +679,6 @@ textarea {
 }
 
 #call-to-action p {
-	color: #fff;
 	font-size: 20px;
 	font-family: 'Lato', sans-serif;
 	font-weight: 300;
@@ -683,6 +686,10 @@ textarea {
 	margin-bottom: 30px;
 }
 
+#call-to-action .heading {
+	font-size: 36px;
+	display: block;
+}
    
 /* ==========================================================================
    09. FOOTER
