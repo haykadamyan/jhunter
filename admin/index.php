@@ -4,6 +4,17 @@
 
     session_start();
 
+    function generateRandomString($length = 10) {
+        $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        $charactersLength = strlen($characters);
+        $randomString = '';
+        for ($i = 0; $i < $length; $i++) {
+            $randomString .= $characters[rand(0, $charactersLength - 1)];
+        }
+        return $randomString;
+    }
+
+
     if(!$_SESSION['login']){
         header("Location: login.php");
     }
@@ -13,7 +24,10 @@
         $title = $_POST['title'];
         $content = $_POST['content'];
 
-        $query = "INSERT INTO `post` (title,content) VALUES ('$title', '$content')";
+        $new_file_name = generateRandomString(20).".png";
+        move_uploaded_file($_FILES['photo']['tmp_name'], '../img/uploads/'.$new_file_name) or die("Can't upload the file");
+
+        $query = "INSERT INTO `post` (title,content,img) VALUES ('$title', '$content', '../img/uploads/$new_file_name')";
         mysqli_query($con, $query);
     }
 
@@ -37,11 +51,21 @@
 
     <div class="container">
 
-        <form>
 
-            <input type="text" class="post_title" placeholder="Post title"><br>
+        <form action="?add_post" method="post" enctype="multipart/form-data">
 
-            <textarea id="editable"></textarea>
+            <input type="text" class="post_title" name="title" placeholder="Post title"><br>
+
+            <textarea id="editable" name="content"></textarea>
+
+            <div class="file-upload">
+                <div class="file-select">
+                    <div class="file-select-button" id="fileName">Choose File</div>
+                    <div class="file-select-name" id="noFile">No file chosen...</div>
+                    <input type="file" name="photo" id="chooseFile">
+                </div>
+            </div>
+
             <button id="submit">Submit</button>
 
 
@@ -55,6 +79,7 @@
                     <th>#</th>
                     <th>Title</th>
                     <th>Content</th>
+                    <th>Img</th>
                     <th>Action</th>
                 </tr>
             </thead>
@@ -69,8 +94,9 @@
                             <td><?=$res['id']?></td>
                             <td><?=$res['title']?></td>
                             <td><?=$res['content']?></td>
-                            <td><a href="?edit_post=<?=$res['id']?>">Edit</a></td>
-                            <td><a href="?delete_post=<?=$res['id']?>">Delete</a></td>
+                            <td><img src="<?=$res['img']?>" style="max-width: 100px;"></td>
+                            <td><a href="?edit_post=<?=$res['id']?>">Edit</a>
+                            <a href="?delete_post=<?=$res['id']?>">Delete</a></td>
                         </tr>
 
                     <?}
@@ -111,27 +137,40 @@
 
         });
 
+//
+//        $("#submit").click(function (e) {
+//            e.preventDefault();
+//            $("#submit").addClass("pro").html("");
+//            $.ajax({
+//                url: "?add_post",
+//                method: "POST",
+//                data: {title: $(".post_title").val(), content: $("#editable").next("div").html()},
+//                success: function(){
+//                    $(".post_title").val("");
+//                    $("#editable").next("div").html("<p></p>");
+//                    $('#submit').addClass("finish");
+//                    setTimeout(function(data){
+//                        $("#submit").removeClass("finish");
+//                        $("#submit").removeClass("pro");
+//                        $("#submit").html("Submit");
+//                        console.log(data);
+//                    },1500);
+//                }
+//            })
+//        });
 
-        $("#submit").click(function (e) {
-            e.preventDefault();
-            $("#submit").addClass("pro").html("");
-            $.ajax({
-                url: "?add_post",
-                method: "POST",
-                data: {title: $(".post_title").val(), content: $("#editable").next("div").html()},
-                success: function(){
-                    $(".post_title").val("");
-                    $("#editable").next("div").html("<p></p>");
-                    $('#submit').addClass("finish");
-                    setTimeout(function(data){
-                        $("#submit").removeClass("finish");
-                        $("#submit").removeClass("pro");
-                        $("#submit").html("Submit");
-                        console.log(data);
-                    },1500);
-                }
-            })
+        $('#chooseFile').bind('change', function () {
+            var filename = $("#chooseFile").val();
+            if (/^\s*$/.test(filename)) {
+                $(".file-upload").removeClass('active');
+                $("#noFile").text("No file chosen...");
+            }
+            else {
+                $(".file-upload").addClass('active');
+                $("#noFile").text(filename.replace("C:\\fakepath\\", ""));
+            }
         });
+
 
     });
 
