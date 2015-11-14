@@ -27,7 +27,7 @@
         $new_file_name = generateRandomString(20).".png";
         move_uploaded_file($_FILES['photo']['tmp_name'], '../img/uploads/'.$new_file_name) or die("Can't upload the file");
 
-        $query = "INSERT INTO `post` (title,content,img) VALUES ('$title', '$content', '../img/uploads/$new_file_name')";
+        $query = "INSERT INTO `post` (title,content,img) VALUES ('$title', '$content', 'img/uploads/$new_file_name')";
         mysqli_query($con, $query);
     }
 
@@ -86,7 +86,7 @@
             <tbody>
                 <?php
 
-                    $query = "SELECT * FROM `post`";
+                    $query = "SELECT * FROM `post` ORDER BY id DESC ";
                     $send_query = mysqli_query($con,$query);
 
                     while($res = mysqli_fetch_assoc($send_query)){?>
@@ -94,7 +94,7 @@
                             <td><?=$res['id']?></td>
                             <td><?=$res['title']?></td>
                             <td><?=$res['content']?></td>
-                            <td><img src="<?=$res['img']?>" style="max-width: 100px;"></td>
+                            <td><img src="../<?=$res['img']?>" style="max-width: 100px;"></td>
                             <td><a href="?edit_post=<?=$res['id']?>">Edit</a>
                             <a href="?delete_post=<?=$res['id']?>">Delete</a></td>
                         </tr>

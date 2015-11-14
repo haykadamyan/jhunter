@@ -1,3 +1,14 @@
+<?php
+
+    include "./includes/db_connect.php";
+    global $con;
+
+
+
+
+?>
+
+
 <!DOCTYPE html>
 <!-- Crossway - Startup Landing Page Template design by DSA79 (http://www.dsathemes.com) -->
 <!--[if lt IE 7 ]><html class="ie ie6" lang="am"> <![endif]-->
@@ -44,7 +55,7 @@
 
 </head>
 
-<body>
+<body id="blog">
 
     <div id="wt_breadcrumbs">
         <div id="wt_breadcrumbs_wrapp" data-color="">
@@ -52,7 +63,7 @@
                 <div class="row">
                     <div class="col-xs-12">
                         <div class="breadcrumbs">
-                            <a href="http://demo.whoathemes.com/crossway/v6/" rel="home" class="breadcrumbs-begin">Home</a>
+                            <a href="http://localhost/blog" rel="home" class="breadcrumbs-begin">Home</a>
                             <span class="breadcrumbs-separator">/</span>
                             Blog
                         </div>
@@ -60,6 +71,58 @@
                 </div>
             </div>
         </div>
+    </div>
+
+    <div class="container">
+
+        <?php
+
+            $query = "SELECT * FROM `post` ORDER BY id DESC ";
+
+            $send_query = mysqli_query($con, $query);
+
+            while($res = mysqli_fetch_assoc($send_query)){
+                ?>
+
+                    <div class="row">
+                        <div class="col-md-12 post all">
+                            <img src="<?=$res['img']?>" alt="">
+                            <h3 class="post-heading"><?=$res['title']?></h3>
+                            <div class="post-content">
+                                <?=$res['content']?>
+                            </div>
+                            <a href="post.php?post_id=<?=$res['id']?>">Read More <i class="fa fa-angle-double-right"></i></a>
+                        </div>
+                    </div>
+
+                <?php
+            }
+
+
+        ?>
+
+<!--        <div class="row">-->
+<!--            <div class="col-md-12 post">-->
+<!--                <img src="http://dsathemes.com/html/crossway/multi_page/fixed_menu/img/blog/img5.jpg" alt="">-->
+<!--                <h3 class="post-heading">Standard post with Single Image</h3>-->
+<!--                <div class="post-content">-->
+<!--                    Etiam condimentum sapien ut sem condimentum accumsan. Proin in adipiscing elit. Proin lobortis molestie ante quis consequat. Sed ac pulvinar eros.-->
+<!--                    Suspendisse cursus risus laoreet turpis auctor, nec pharetra massa varius. Suspendisse dignissim sollicitudin sem, id ornare elit aliquam&ensp;-->
+<!--                    Etiam condimentum sapien ut sem condimentum accumsan. Proin in adipiscing elit. Proin lobortis molestie ante quis consequat. Sed ac pulvinar eros.-->
+<!--                    Suspendisse cursus risus laoreet turpis auctor, nec pharetra massa varius. Suspendisse dignissim sollicitudin sem, id ornare elit aliquam&ensp;-->
+<!--                    Etiam condimentum sapien ut sem condimentum accumsan. Proin in adipiscing elit. Proin lobortis molestie ante quis consequat. Sed ac pulvinar eros.-->
+<!--                    Suspendisse cursus risus laoreet turpis auctor, nec pharetra massa varius. Suspendisse dignissim sollicitudin sem, id ornare elit aliquam&ensp;-->
+<!--                    Etiam condimentum sapien ut sem condimentum accumsan. Proin in adipiscing elit. Proin lobortis molestie ante quis consequat. Sed ac pulvinar eros.-->
+<!--                    Suspendisse cursus risus laoreet turpis auctor, nec pharetra massa varius. Suspendisse dignissim sollicitudin sem, id ornare elit aliquam&ensp;-->
+<!--                    Etiam condimentum sapien ut sem condimentum accumsan. Proin in adipiscing elit. Proin lobortis molestie ante quis consequat. Sed ac pulvinar eros.-->
+<!--                    Suspendisse cursus risus laoreet turpis auctor, nec pharetra massa varius. Suspendisse dignissim sollicitudin sem, id ornare elit aliquam&ensp;-->
+<!--                    Etiam condimentum sapien ut sem condimentum accumsan. Proin in adipiscing elit. Proin lobortis molestie ante quis consequat. Sed ac pulvinar eros.-->
+<!--                    Suspendisse cursus risus laoreet turpis auctor, nec pharetra massa varius. Suspendisse dignissim sollicitudin sem, id ornare elit aliquam&ensp;-->
+<!--                </div>-->
+<!--                <a href="single-post.html">Read More <i class="fa fa-angle-double-right"></i></a>-->
+<!--            </div>-->
+<!--        </div>-->
+
     </div>
 
 </body>
