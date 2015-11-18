@@ -1,5 +1,5 @@
 <?php
-    $con = mysqli_connect("jq94ic8e6g.database.windows.net", "hayk", "", "yourhelpToday") or die("Can't connect to database");
+    $con = mysqli_connect("hxbs8nkiec.database.windows.net:1433", "hayk", "Password15", "yourHelpToday") or die("Can't connect to database");
 
     function getObjectFromQuery($query){
         global $con;
