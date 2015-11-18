@@ -31,18 +31,12 @@
 
     <!-- Libs CSS -->
     <link href="css/bootstrap.css" rel="stylesheet">
-    <link href="css/font-awesome.min.css" rel="stylesheet">
-    <link href="css/flexslider.css" rel="stylesheet">
-    <link href="css/owl.carousel.css" rel="stylesheet">
-
-    <!-- On Scroll Animations -->
-    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/animate.min.css" rel="stylesheet">
+    <link href="css/creative.css" rel="stylesheet">
 
     <!-- Template CSS -->
-    <link href="css/style.css" rel="stylesheet">
 
     <!-- Responsive CSS -->
-    <link href="css/responsive.css" rel="stylesheet">
 
     <!-- Favicons -->
     <link rel="shortcut icon" href="img/icons/favicon.ico">
@@ -55,7 +49,7 @@
 
 </head>
 
-<body id="blog">
+<body class="blog">
 
     <div id="wt_breadcrumbs">
         <div id="wt_breadcrumbs_wrapp" data-color="">
@@ -73,7 +67,7 @@
         </div>
     </div>
 
-    <div class="container">
+    <div class="container body-container">
 
         <?php
 

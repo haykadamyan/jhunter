@@ -479,3 +479,26 @@ img::-moz-selection {
 body {
     webkit-tap-highlight-color: #222;
 }
+
+/*Blog page*/
+
+#wt_breadcrumbs{
+    padding: 30px;
+    background-color: #f05f40;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    top: 0px;
+}
+
+.body-container{
+    margin-top: 110px;
+}
+
+.breadcrumbs{
+    font-size: 17px;
+}
+
+a[rel="home"]{
+    color: #FFFFFF;
+}
