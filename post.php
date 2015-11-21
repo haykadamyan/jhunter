@@ -3,9 +3,6 @@
 include "./includes/db_connect.php";
 global $con;
 
-echo "<pre>";
-print_r($_SERVER);die;
-
 ?>
 
 
@@ -48,7 +45,9 @@ print_r($_SERVER);die;
                     <div class="breadcrumbs">
                         <a href="http://localhost/blog" rel="home" class="breadcrumbs-begin">Home</a>
                         <span class="breadcrumbs-separator">/</span>
-                        Blog
+                        <a href="http://localhost/blog/blog.php" rel="home" class="breadcrumbs-begin">Blog</a>
+                        <span class="breadcrumbs-separator">/</span>
+                        Post
                     </div>
                 </div>
             </div>

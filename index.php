@@ -1,10 +1,25 @@
 <?php
 
-    include "./includes/db_connect.php";
-    global $con;
+    if(isset($_POST['submit_question'])){
+        $name = $_POST['name'];
+        $phone = $_POST['phone'];
+        $question = $_POST['question'];
+
+        $to = "drprog00@gmail.com";
+        $subject = "New question";
+        $txt = "Hello world!";
+        $headers = "From: customer@thejhunter.com";
+
+        mail($to,$subject,$txt,$headers);
+
+        echo $name . " " . $phone . " " . $question;
+    }
+
+
 
 
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -44,6 +59,34 @@
 
 <body id="page-top">
 
+    <div id="online-order" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Կապնվել օպերատորի հետ հենց հիմա</h4>
+                </div>
+                <div class="modal-body">
+                    <form action="" method="post">
+                        <input type="text" name="name" class="form-control" placeholder="Անուն"><br>
+                        <input type="text" name="phone" class="form-control" placeholder="Հեռախոսահամար"><br>
+                        <textarea class="form-control" style="resize: vertical; min-height: 130px" name="question" placeholder="Ինչո՞վ կարող ենք Ձեզ օգնել"></textarea>
+                        <div class="text-right" style="padding-top: 20px">
+                            <button type="submit" name="submit_question" class="btn btn-warning">Ուղարկել</button>
+                            <button type="button" class="btn btn-info" data-dismiss="modal">Փակել</button>
+                        </div>
+                    </form>
+                </div>
+<!--                <div class="modal-footer">-->
+<!--                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>-->
+<!--                </div>-->
+            </div>
+
+        </div>
+    </div>
+
     <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -67,7 +110,7 @@
                         <a class="page-scroll" href="#services">Ինչպե՞ս է այն աշխատում</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#portfolio">Նորություններ</a>
+                        <a class="page-scroll" href="#portfolio">Օպերատորներ</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#contact">Հետադարձ կապ</a>
@@ -85,7 +128,7 @@
                 <h1>jHunter</h1>
                 <hr>
                 <p>Վիրտուալ քարտուղար որը կօգնի Ձեզ Ձեր առօրյա մանր խնդիրներում</p>
-                <a href="#about" class="btn btn-primary btn-xl page-scroll">Ավելի մանրամասն</a>
+                <a href="javascript:void()" class="btn btn-primary btn-xl page-scroll" data-toggle="modal" data-target="#online-order">Ավելի մանրամասն</a>
             </div>
         </div>
     </header>
@@ -148,41 +191,55 @@
     </section>
 
     <section class="no-padding" id="portfolio">
-        <div class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Օպերատորներ</h2>
+                    <hr class="primary">
+                </div>
+            </div>
             <div class="row no-gutter">
-
-                <?php
-
-                $query = "SELECT * FROM `post` ORDER BY id DESC LIMIT 6";
-
-                $send_query = mysqli_query($con, $query);
-
-
-
-//                print_r($send_query);die;
-                while($res = mysqli_fetch_assoc($send_query)){
-                    ?>
-
-                    <div class="col-lg-4 col-sm-6">
-                        <a href="post.php?post_id=<?=$res['id']?>" class="portfolio-box">
-                            <img src="<?=$res['img']?>" class="img-responsive" alt="">
-                            <div class="portfolio-box-caption">
-                                <div class="portfolio-box-caption-content">
-                                    <div class="project-name">
-                                        <?=$res['title']?>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
+                    <div class="col-lg-4 col-sm-6 assistant">
+                        <img src="img/assistants/1.jpg" class="img-responsive assistant-picture" alt="">
+                        <span class="assistant-text assistant-name h3">Լուսինե Ալեքսանյան</span>
+                        <strong class="assistant-text">Լուսինեն պատասխանել է 497 հարցի</strong>
+                        <div class="stars">
+                            <span class="fa fa-star custom-star"></span>
+                            <span class="fa fa-star custom-star"></span>
+                            <span class="fa fa-star custom-star"></span>
+                            <span class="fa fa-star custom-star"></span>
+                            <span class="fa fa-star-half-o custom-star"></span>
+                        </div>
+                        <a href="#" class="btn btn-warning">Կապնվել Լուսինեի հետ</a>
                     </div>
 
+                    <div class="col-lg-4 col-sm-6 assistant">
+                        <img src="img/assistants/2.jpg" class="img-responsive assistant-picture" alt="">
+                        <span class="assistant-text assistant-name h3">Կարեն Մամիկոնյան</span>
+                        <strong class="assistant-text">Կարենը պատասխանել է 638 հարցի</strong>
+                        <div class="stars">
+                            <span class="fa fa-star custom-star"></span>
+                            <span class="fa fa-star custom-star"></span>
+                            <span class="fa fa-star custom-star"></span>
+                            <span class="fa fa-star custom-star"></span>
+                            <span class="fa fa-star-o custom-star"></span>
+                        </div>
+                        <a href="#" class="btn btn-warning">Կապնվել Կարենի հետ</a>
+                    </div>
 
-                    <?php
-                }
-
-
-                ?>
-
+                    <div class="col-lg-4 col-sm-6 assistant">
+                        <img src="img/assistants/3.jpg" class="img-responsive assistant-picture" alt="">
+                        <span class="assistant-text assistant-name h3">Մարիամ Ավետիսյան</span>
+                        <strong class="assistant-text">Մարիամը պատասխանել է 328 հարցի</strong>
+                        <div class="stars">
+                            <span class="fa fa-star custom-star"></span>
+                            <span class="fa fa-star custom-star"></span>
+                            <span class="fa fa-star custom-star"></span>
+                            <span class="fa fa-star custom-star"></span>
+                            <span class="fa fa-star custom-star"></span>
+                        </div>
+                        <a href="#" class="btn btn-warning">Կապնվել Մարիամի հետ</a>
+                    </div>
             </div>
         </div>
     </section>
@@ -190,7 +247,7 @@
     <aside class="bg-dark">
         <div class="container text-center">
             <div class="call-to-action">
-                <h2>Այլեւս մի վատեք  Ձեր ժամանկը, ԶԱՆԳԱՀԱՐԵ'Ք</h2>
+                <h2>Այլեւս մի վատնեք  Ձեր ժամանկը, ԶԱՆԳԱՀԱՐԵ'Ք</h2>
                 <!--<a href="#" class="btn btn-default btn-xl wow tada">Download Now!</a>-->
                 <strong class="h1 wow tada">(094) 35 12 32</strong>
             </div>
