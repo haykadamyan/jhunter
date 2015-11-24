@@ -7,12 +7,12 @@
 
         $to = "drprog00@gmail.com";
         $subject = "New question";
-        $txt = "Hello world!";
-        $headers = "From: customer@thejhunter.com";
+        $txt = "Անուն - " . $name . "<br>Հեռախոսահամար - " . $phone . "<br>Հարց - " . $question;
+        $headers = "Content-type:text/html;charset=UTF-8" . "\r\n";
+        $headers.= "From: customer@thejhunter.com";
 
         mail($to,$subject,$txt,$headers);
 
-        echo $name . " " . $phone . " " . $question;
     }
 
 
@@ -72,7 +72,7 @@
                     <form action="" method="post">
                         <input type="text" name="name" class="form-control" placeholder="Անուն"><br>
                         <input type="text" name="phone" class="form-control" placeholder="Հեռախոսահամար"><br>
-                        <textarea class="form-control" style="resize: vertical; min-height: 130px" name="question" placeholder="Ինչո՞վ կարող ենք Ձեզ օգնել"></textarea>
+                        <textarea class="form-control" style="resize: vertical; min-height: 130px" name="question" placeholder="Ողջույն ինչո՞վ կարող եմ Ձեզ օգնել"></textarea>
                         <div class="text-right" style="padding-top: 20px">
                             <button type="submit" name="submit_question" class="btn btn-warning">Ուղարկել</button>
                             <button type="button" class="btn btn-info" data-dismiss="modal">Փակել</button>
@@ -128,7 +128,7 @@
                 <h1>jHunter</h1>
                 <hr>
                 <p>Վիրտուալ քարտուղար որը կօգնի Ձեզ Ձեր առօրյա մանր խնդիրներում</p>
-                <a href="javascript:void()" class="btn btn-primary btn-xl page-scroll" data-toggle="modal" data-target="#online-order">Ավելի մանրամասն</a>
+                <a href="#portfolio" class="btn btn-primary btn-xl page-scroll" >Կապնվել մեր Քարտուղարների հետ</a>
             </div>
         </div>
     </header>
@@ -139,7 +139,7 @@
                 <div class="col-lg-8 col-lg-offset-2 text-center">
                     <h2 class="section-heading">Մենք կլուծենք Ձեր առօրյա խնդիրները</h2>
                     <hr class="light">
-                    <p class="text-justify">Մեր ծառայության շնորհիվ Դուք կունենաք վիրտուալ քարտուղար: Նրան Դուք կարող եք վստահել Ձեր ամենակարևոր և հրատապ գործերի իրականացումը` անկախ Ձեր գտնվելու վայրից: Պարզապես զանգահարեք եւ ստացեք Ձեզ հետաքրքրող, նախապես ճշտված տեղեկատվություն ամենատարբեր բնագավառներից` սկսած սպասարկման ոլորտից մինչև պետական մարմիններ: Տեղեկատվություն ոչ միայն հասցեի կամ հեռախոսահամարի տեսքով, այլ նաև գործունեության, պայմանների ու ցանկացած այլ մանրամասների: Ինչպես նաեւ մեր միջոցով Դուք կարող եք օգտվել հանրապետությունում գործող տարբեր ծառայություններից խնայելով Ձեր ժամանակը։</p>
+                    <p class="text-justify">jHunter-ի շնորհիվ Դուք կունենաք Ձեր անձնական քարտուղարը: Նրան Դուք կարող եք վստահել Ձեր ամենակարևոր և հրատապ գործերի իրականացումը` անկախ Ձեր գտնվելու վայրից: Պարզապես զանգահարեք եւ ստացեք Ձեզ հետաքրքրող, նախապես ճշտված տեղեկատվություն ամենատարբեր բնագավառներից` սկսած սպասարկման ոլորտից մինչև պետական մարմիններ: Տեղեկատվություն ոչ միայն հասցեի կամ հեռախոսահամարի տեսքով, այլ նաև գործունեության, պայմանների ու ցանկացած այլ մանրամասների:</p>
                     <!--<a href="#" class="btn btn-default btn-xl">Get Started!</a>-->
                     <strong class="h1">(094) 35 12 32</strong>
                 </div>
@@ -158,32 +158,22 @@
         </div>
         <div class="container">
             <div class="row">
-                <div class="col-lg-3 col-md-6 text-center">
+                <div class="col-lg-4 col-md-6 text-center">
                     <div class="service-box">
                         <i class="fa fa-4x fa-phone wow bounceIn text-primary"></i>
-                        <h3>Զանգահարեք</h3>
-                        <p class="text-muted">Մեր օպերատորները միշտ տեղում են եւ պատրաստ են Ձեզ օգնել ցանկացաց հարցում։</p>
+                        <h3>Զանգահարեք Ձեր անձնական քարտուղարին</h3>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 text-center">
+                <div class="col-lg-4 col-md-6 text-center">
                     <div class="service-box">
                         <i class="fa fa-4x fa-comments-o wow bounceIn text-primary" data-wow-delay=".1s"></i>
                         <h3>Բացատրեք Ձեր խնդիրը</h3>
-                        <p class="text-muted">Պատասխանեք մի քանի պարզագույն հարցի մեր օպերատորի կողմից։</p>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="service-box">
-                        <i class="fa fa-4x fa-clock-o wow bounceIn text-primary" data-wow-delay=".2s"></i>
-                        <h3>Սպասեք</h3>
-                        <p class="text-muted">Սպասեք 2-ից 3 րոպե քանի դեռ մեր օպերատորը կփնտրի Ձեր հարցի պատասխանը։</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 text-center">
+                <div class="col-lg-4 col-md-6 text-center">
                     <div class="service-box">
                         <i class="fa fa-4x fa-phone wow bounceIn text-primary" data-wow-delay=".3s"></i>
                         <h3>Ստացեք Ձեր հարցի պատասխանը</h3>
-                        <p class="text-muted">Ստացեք հետ զանգ որը կպտասխանի Ձեր հարցին։</p>
                     </div>
                 </div>
             </div>
@@ -194,15 +184,15 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Օպերատորներ</h2>
+                    <h2 class="section-heading">Կապնվեք մեր քարտուղարների հետ</h2>
                     <hr class="primary">
                 </div>
             </div>
             <div class="row no-gutter">
                     <div class="col-lg-4 col-sm-6 assistant">
                         <img src="img/assistants/1.jpg" class="img-responsive assistant-picture" alt="">
-                        <span class="assistant-text assistant-name h3">Լուսինե Ալեքսանյան</span>
-                        <strong class="assistant-text">Լուսինեն պատասխանել է 497 հարցի</strong>
+                        <span class="assistant-text assistant-name h3">Լուսինե</span>
+                        <strong class="assistant-text">Ես օգնել եմ 497 հոգու</strong>
                         <div class="stars">
                             <span class="fa fa-star custom-star"></span>
                             <span class="fa fa-star custom-star"></span>
@@ -210,13 +200,13 @@
                             <span class="fa fa-star custom-star"></span>
                             <span class="fa fa-star-half-o custom-star"></span>
                         </div>
-                        <a href="#" class="btn btn-warning">Կապնվել Լուսինեի հետ</a>
+                        <a href="javascript:void()"  data-toggle="modal" data-target="#online-order" class="btn btn-warning wow tada">Կապնվել Լուսինեի հետ</a>
                     </div>
 
                     <div class="col-lg-4 col-sm-6 assistant">
                         <img src="img/assistants/2.jpg" class="img-responsive assistant-picture" alt="">
-                        <span class="assistant-text assistant-name h3">Կարեն Մամիկոնյան</span>
-                        <strong class="assistant-text">Կարենը պատասխանել է 638 հարցի</strong>
+                        <span class="assistant-text assistant-name h3">Կարեն</span>
+                        <strong class="assistant-text">Ես պատասխանել եմ 638 հարցի</strong>
                         <div class="stars">
                             <span class="fa fa-star custom-star"></span>
                             <span class="fa fa-star custom-star"></span>
@@ -224,13 +214,13 @@
                             <span class="fa fa-star custom-star"></span>
                             <span class="fa fa-star-o custom-star"></span>
                         </div>
-                        <a href="#" class="btn btn-warning">Կապնվել Կարենի հետ</a>
+                        <a href="javascript:void()" data-wow-delay="1s" data-toggle="modal" data-target="#online-order" class="btn btn-warning wow tada">Կապնվել Կարենի հետ</a>
                     </div>
 
                     <div class="col-lg-4 col-sm-6 assistant">
                         <img src="img/assistants/3.jpg" class="img-responsive assistant-picture" alt="">
-                        <span class="assistant-text assistant-name h3">Մարիամ Ավետիսյան</span>
-                        <strong class="assistant-text">Մարիամը պատասխանել է 328 հարցի</strong>
+                        <span class="assistant-text assistant-name h3">Մարիամ</span>
+                        <strong class="assistant-text">Ես սպասարկել եմ 328 հոգու</strong>
                         <div class="stars">
                             <span class="fa fa-star custom-star"></span>
                             <span class="fa fa-star custom-star"></span>
@@ -238,7 +228,7 @@
                             <span class="fa fa-star custom-star"></span>
                             <span class="fa fa-star custom-star"></span>
                         </div>
-                        <a href="#" class="btn btn-warning">Կապնվել Մարիամի հետ</a>
+                        <a href="javascript:void()" data-wow-delay="2s" data-toggle="modal" data-target="#online-order" class="btn btn-warning wow tada">Կապնվել Մարիամի հետ</a>
                     </div>
             </div>
         </div>
@@ -249,7 +239,7 @@
             <div class="call-to-action">
                 <h2>Այլեւս մի վատնեք  Ձեր ժամանկը, ԶԱՆԳԱՀԱՐԵ'Ք</h2>
                 <!--<a href="#" class="btn btn-default btn-xl wow tada">Download Now!</a>-->
-                <strong class="h1 wow tada">(094) 35 12 32</strong>
+                <strong class="h1">(094) 35 12 32</strong>
             </div>
         </div>
     </aside>
