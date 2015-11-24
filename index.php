@@ -72,7 +72,7 @@
                     <form action="" method="post">
                         <input type="text" name="name" class="form-control" placeholder="Անուն"><br>
                         <input type="text" name="phone" class="form-control" placeholder="Հեռախոսահամար"><br>
-                        <textarea class="form-control" style="resize: vertical; min-height: 130px" name="question" placeholder="Ողջույն ինչո՞վ կարող եմ Ձեզ օգնել"></textarea>
+                        <textarea class="form-control" style="resize: vertical; min-height: 130px; max-height: 300px;" name="question" placeholder="Ողջույն ինչո՞վ կարող եմ Ձեզ օգնել"></textarea>
                         <div class="text-right" style="padding-top: 20px">
                             <button type="submit" name="submit_question" class="btn btn-warning">Ուղարկել</button>
                             <button type="button" class="btn btn-info" data-dismiss="modal">Փակել</button>
@@ -133,7 +133,7 @@
         </div>
     </header>
 
-    <section class="bg-primary" id="about">
+    <section id="about">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
@@ -147,7 +147,7 @@
         </div>
     </section>
 
-    <section id="services">
+    <section class="bg-primary" id="services">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -180,7 +180,7 @@
         </div>
     </section>
 
-    <section class="no-padding" id="portfolio">
+    <section id="portfolio">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -192,7 +192,7 @@
                     <div class="col-lg-4 col-sm-6 assistant">
                         <img src="img/assistants/1.jpg" class="img-responsive assistant-picture" alt="">
                         <span class="assistant-text assistant-name h3">Լուսինե</span>
-                        <strong class="assistant-text">Ես օգնել եմ 497 հոգու</strong>
+                        <strong class="assistant-text">Ես օգնել եմ 497 հաճախորդի</strong>
                         <div class="stars">
                             <span class="fa fa-star custom-star"></span>
                             <span class="fa fa-star custom-star"></span>
@@ -239,7 +239,7 @@
             <div class="call-to-action">
                 <h2>Այլեւս մի վատնեք  Ձեր ժամանկը, ԶԱՆԳԱՀԱՐԵ'Ք</h2>
                 <!--<a href="#" class="btn btn-default btn-xl wow tada">Download Now!</a>-->
-                <strong class="h1">(094) 35 12 32</strong>
+                <strong class="h1 wow bounceInUp">(094) 35 12 32</strong>
             </div>
         </div>
     </aside>
