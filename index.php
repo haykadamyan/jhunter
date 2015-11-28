@@ -139,7 +139,7 @@
                 <div class="col-lg-8 col-lg-offset-2 text-center">
                     <h2 class="section-heading">Մենք կլուծենք Ձեր առօրյա խնդիրները</h2>
                     <hr class="light">
-                    <p class="text-justify">jHunter-ի շնորհիվ Դուք կունենաք Ձեր անձնական քարտուղարը: Նրան Դուք կարող եք վստահել Ձեր ամենակարևոր և հրատապ գործերի իրականացումը` անկախ Ձեր գտնվելու վայրից: Պարզապես զանգահարեք եւ ստացեք Ձեզ հետաքրքրող, նախապես ճշտված տեղեկատվություն ամենատարբեր բնագավառներից` սկսած սպասարկման ոլորտից մինչև պետական մարմիններ: Տեղեկատվություն ոչ միայն հասցեի կամ հեռախոսահամարի տեսքով, այլ նաև գործունեության, պայմանների ու ցանկացած այլ մանրամասների:</p>
+                    <p class="text-justify">Ձեր առօրյա փոքր բայց ժամանակատար անելիքները պետք է կատարվեն, բայց ոչ պարտադիր հենց Ձեր կողմից։ Մեր վիրտուալ քարտուղարները կօգնեն Ձեզ իրականացնել առօրյա փոքր անելիքները, որպեսզի դուք ավելի շատ կենտրոնանաք կարևոր անելիքների վրա, մինչ մենք կզբաղվենք մնացածով։</p>
                     <!--<a href="#" class="btn btn-default btn-xl">Get Started!</a>-->
                     <strong class="h1">(094) 35 12 32</strong>
                 </div>
@@ -160,8 +160,8 @@
             <div class="row">
                 <div class="col-lg-4 col-md-6 text-center">
                     <div class="service-box">
-                        <i class="fa fa-4x fa-phone wow bounceIn text-primary"></i>
-                        <h3>Զանգահարեք Ձեր անձնական քարտուղարին</h3>
+                        <i class="fa fa-4x fa-laptop wow bounceIn text-primary"></i>
+                        <h3>Կապնվեք Ձեր անձնական քարտուղարի հետ</h3>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 text-center">
@@ -172,8 +172,8 @@
                 </div>
                 <div class="col-lg-4 col-md-6 text-center">
                     <div class="service-box">
-                        <i class="fa fa-4x fa-phone wow bounceIn text-primary" data-wow-delay=".3s"></i>
-                        <h3>Ստացեք Ձեր հարցի պատասխանը</h3>
+                        <i class="fa fa-4x fa-thumbs-o-up wow bounceIn text-primary" data-wow-delay=".3s"></i>
+                        <h3>Ձեր խնդիրը լուծված է</h3>
                     </div>
                 </div>
             </div>
@@ -184,50 +184,57 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Կապնվեք մեր քարտուղարների հետ</h2>
+                    <h2 class="section-heading">Կապնվեք Ձեր անձնական քարտուղարի հետ</h2>
                     <hr class="primary">
                 </div>
             </div>
             <div class="row no-gutter">
                     <div class="col-lg-4 col-sm-6 assistant">
-                        <img src="img/assistants/1.jpg" class="img-responsive assistant-picture" alt="">
-                        <span class="assistant-text assistant-name h3">Լուսինե</span>
-                        <strong class="assistant-text">Ես օգնել եմ 497 հաճախորդի</strong>
-                        <div class="stars">
-                            <span class="fa fa-star custom-star"></span>
-                            <span class="fa fa-star custom-star"></span>
-                            <span class="fa fa-star custom-star"></span>
-                            <span class="fa fa-star custom-star"></span>
-                            <span class="fa fa-star-half-o custom-star"></span>
+                        <div class="assistant-info">
+                            <img src="img/assistants/1.jpg" class="img-responsive assistant-picture" alt="">
+                            <div class="stars text-center">
+                                <span class="fa fa-star custom-star"></span>
+                                <span class="fa fa-star custom-star"></span>
+                                <span class="fa fa-star custom-star"></span>
+                                <span class="fa fa-star custom-star"></span>
+                                <span class="fa fa-star-half-o custom-star"></span>
+                            </div>
                         </div>
+                        <span class="assistant-text assistant-name h3">Լուսինե</span>
+                        <strong class="assistant-text">Ես Ձեզ կօգնեմ ամրագրել՝ հյուրանոցներ, պատվիրել կինոթատրոնի եւ համերգների տոմսեր, եւ այլն։ Ինձնից արդեն գոհ է 497 հաճախորդ։</strong>
                         <a href="javascript:void()"  data-toggle="modal" data-target="#online-order" class="btn btn-warning wow tada">Կապնվել Լուսինեի հետ</a>
                     </div>
 
                     <div class="col-lg-4 col-sm-6 assistant">
-                        <img src="img/assistants/2.jpg" class="img-responsive assistant-picture" alt="">
-                        <span class="assistant-text assistant-name h3">Կարեն</span>
-                        <strong class="assistant-text">Ես պատասխանել եմ 638 հարցի</strong>
-                        <div class="stars">
-                            <span class="fa fa-star custom-star"></span>
-                            <span class="fa fa-star custom-star"></span>
-                            <span class="fa fa-star custom-star"></span>
-                            <span class="fa fa-star custom-star"></span>
-                            <span class="fa fa-star-o custom-star"></span>
+                        <div class="assistant-info">
+                            <img src="img/assistants/2.jpg" class="img-responsive assistant-picture" alt="">
+                            <div class="stars text-center">
+                                <span class="fa fa-star custom-star"></span>
+                                <span class="fa fa-star custom-star"></span>
+                                <span class="fa fa-star custom-star"></span>
+                                <span class="fa fa-star custom-star"></span>
+                                <span class="fa fa-star-o custom-star"></span>
+                            </div>
                         </div>
+                        <span class="assistant-text assistant-name h3">Կարեն</span>
+                        <strong class="assistant-text">Ես Ձեզ կօգնեմ գտնել համապատասխան վարպետին Ձեր տնային խնդիրների լուծման համար։ Ինձնից գոհ է 693 հաճախորդ։</strong>
+
                         <a href="javascript:void()" data-wow-delay="1s" data-toggle="modal" data-target="#online-order" class="btn btn-warning wow tada">Կապնվել Կարենի հետ</a>
                     </div>
 
                     <div class="col-lg-4 col-sm-6 assistant">
-                        <img src="img/assistants/3.jpg" class="img-responsive assistant-picture" alt="">
-                        <span class="assistant-text assistant-name h3">Մարիամ</span>
-                        <strong class="assistant-text">Ես սպասարկել եմ 328 հոգու</strong>
-                        <div class="stars">
-                            <span class="fa fa-star custom-star"></span>
-                            <span class="fa fa-star custom-star"></span>
-                            <span class="fa fa-star custom-star"></span>
-                            <span class="fa fa-star custom-star"></span>
-                            <span class="fa fa-star custom-star"></span>
+                        <div class="assistant-info">
+                            <img src="img/assistants/3.jpg" class="img-responsive assistant-picture" alt="">
+                            <div class="stars text-center">
+                                <span class="fa fa-star custom-star"></span>
+                                <span class="fa fa-star custom-star"></span>
+                                <span class="fa fa-star custom-star"></span>
+                                <span class="fa fa-star custom-star"></span>
+                                <span class="fa fa-star custom-star"></span>
+                            </div>
                         </div>
+                        <span class="assistant-text assistant-name h3">Մարիամ</span>
+                        <strong class="assistant-text">Ես կպայմանավորվեմ Ձեր այցելության ժամերը ատամնաբուժարանների, գեղեցկության սրահների եւ այլ հաստատությունների հետ։</strong>
                         <a href="javascript:void()" data-wow-delay="2s" data-toggle="modal" data-target="#online-order" class="btn btn-warning wow tada">Կապնվել Մարիամի հետ</a>
                     </div>
             </div>
