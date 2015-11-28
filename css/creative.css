@@ -483,6 +483,7 @@ body {
 .assistant .btn{
     text-transform: none !important;
     margin-top: 40px;
+    outline: none !important;
 }
 
 .assistant-text{
