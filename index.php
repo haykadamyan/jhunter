@@ -11,7 +11,11 @@
         $headers = "Content-type:text/html;charset=UTF-8" . "\r\n";
         $headers.= "From: customer@thejhunter.com";
 
-        mail($to,$subject,$txt,$headers);
+        if(mail($to,$subject,$txt,$headers)){
+            echo "<script>window.onload=function(){
+            $.notify('Ձեր հարցումը կատարված է, մենք Ձեզ կզանգահարենք 2 րոպեի ընդացկում:',{position:'top-left', className:'success'});
+            }</script>";
+        }
 
     }
 
@@ -19,7 +23,6 @@
 
 
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -66,13 +69,13 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">Կապնվել օպերատորի հետ հենց հիմա</h4>
+                    <h4 class="modal-title">Կապնվեք Ձեր անձնական քարտուղարի հետ հենց հիմա</h4>
                 </div>
                 <div class="modal-body">
                     <form action="" method="post">
-                        <input type="text" name="name" class="form-control" placeholder="Անուն"><br>
-                        <input type="text" name="phone" class="form-control" placeholder="Հեռախոսահամար"><br>
-                        <textarea class="form-control" style="resize: vertical; min-height: 130px; max-height: 300px;" name="question" placeholder="Ողջույն ինչո՞վ կարող եմ Ձեզ օգնել"></textarea>
+                        <input type="text" required name="name" class="form-control" placeholder="Անուն"><br>
+                        <input type="text" required name="phone" class="form-control" placeholder="Հեռախոսահամար"><br>
+                        <textarea class="form-control" required style="resize: vertical; min-height: 130px; max-height: 300px;" name="question" placeholder="Ողջույն ինչո՞վ կարող եմ Ձեզ օգնել"></textarea>
                         <div class="text-right" style="padding-top: 20px">
                             <button type="submit" name="submit_question" class="btn btn-warning">Ուղարկել</button>
                             <button type="button" class="btn btn-info" data-dismiss="modal">Փակել</button>
@@ -110,10 +113,10 @@
                         <a class="page-scroll" href="#services">Ինչպե՞ս է այն աշխատում</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#portfolio">Օպերատորներ</a>
+                        <a class="page-scroll" href="#portfolio">Քարտուղարներ</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#contact">Հետադարձ կապ</a>
+                        <a class="page-scroll" target="_blank" href="blog.php">Նորություններ</a>
                     </li>
                 </ul>
             </div>
@@ -128,7 +131,7 @@
                 <h1>jHunter</h1>
                 <hr>
                 <p>Անհատական վիրտուալ քարտուղար զբաղված մարդկանց համար<br>որոնց ժամանակը ավելի քիչ է քան առօրյա անելիքները</p>
-                <a href="#portfolio" class="btn btn-primary btn-xl page-scroll" >Կապնվել մեր Քարտուղարների հետ</a>
+                <a href="#portfolio" class="btn btn-primary btn-xl page-scroll" >Կապնվեք Ձեր անձնական քարտուղարի հետ</a>
             </div>
         </div>
     </header>
@@ -213,7 +216,7 @@
                                 <span class="fa fa-star custom-star"></span>
                                 <span class="fa fa-star custom-star"></span>
                                 <span class="fa fa-star custom-star"></span>
-                                <span class="fa fa-star-o custom-star"></span>
+                                <span class="fa fa-star-half-o custom-star"></span>
                             </div>
                         </div>
                         <span class="assistant-text assistant-name h3">Կարեն</span>
@@ -281,6 +284,7 @@
     <script src="js/jquery.easing.min.js"></script>
     <script src="js/jquery.fittext.js"></script>
     <script src="js/wow.min.js"></script>
+    <script src="js/notify.min.js"></script>
 
     <!-- Custom Theme JavaScript -->
     <script src="js/creative.js"></script>

@@ -81,6 +81,10 @@ aside {
     padding: 0;
 }
 
+#mainNav{
+    background-color: #f05f40;
+}
+
 .navbar-default {
     border-color: rgba(34,34,34,.05);
     background-color: #fff;
