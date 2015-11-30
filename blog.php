@@ -82,7 +82,7 @@
                             <div class="post-content">
                                 Ամանօրյա տոներին ընդառաջ, jHunter-ը ներկայանում է բում առաջարկով։ Մինչեւ դեկտեմբերի 25-ը <a href="http://thejhunter.com">www.thejhunter.com</a> անհատական վիրտուալ քարտուղարի միջոցով 10 եւ ավելի հարցում ուղարկած հաճախորդները հնարավորություն կունենան...
                             </div>
-                            <a href="post.php?post_id=1">Read More <i class="fa fa-angle-double-right"></i></a>
+                            <a href="post.php?post_id=1">Կարդալ ավելին<i class="fa fa-angle-double-right"></i></a>
                         </div>
                     </div>
 
