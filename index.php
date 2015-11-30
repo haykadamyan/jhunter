@@ -13,7 +13,7 @@
 
         if(mail($to,$subject,$txt,$headers)){
             echo "<script>window.onload=function(){
-            $.notify('Ձեր հարցումը կատարված է, մենք Ձեզ կզանգահարենք 2 րոպեի ընդացկում:',{position:'top-left', className:'success'});
+            $.notify('Ձեր հարցումը կատարված է, մենք Ձեզ կզանգահարենք մի քանի րոպեի ընդացկում:',{position:'top-left', className:'success'});
             }</script>";
         }
 
@@ -61,6 +61,30 @@
 </head>
 
 <body id="page-top">
+
+    <div id="bonus" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Բում խաղարկություն</h4>
+                </div>
+                <div class="modal-body">
+                    <img src="img/iphone.png" style="width: 128px;float: left;margin-right: 22px;">Ամանօրյա տոներին ընդառաջ, jHunter-ը ներկայանում է բում առաջարկով։ Մինչեւ դեկտեմբերի 25-ը 10 եւ ավելի հարցում ուղարկած հաճախորդները հնարավորություն կունենան մասնակցել լրիվ նոր <strong>iPhone 6s</strong>-ի խաղարկությանը։
+                    <div class="text-right" style="padding-top: 20px">
+                        <span style="clear:both; display: block; visibility: hidden"></span>
+                        <button type="button" class="btn btn-info" data-dismiss="modal">Շնորհակալություն</button>
+                    </div>
+                </div>
+                <!--                <div class="modal-footer">-->
+                <!--                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>-->
+                <!--                </div>-->
+            </div>
+
+        </div>
+    </div>
 
     <div id="online-order" class="modal fade" role="dialog">
         <div class="modal-dialog">
@@ -288,6 +312,12 @@
 
     <!-- Custom Theme JavaScript -->
     <script src="js/creative.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#bonus").modal("show");
+        });
+
+    </script>
 
 </body>
 
