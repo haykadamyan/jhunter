@@ -75,7 +75,7 @@
                     <img src="img/iphone.png" style="width: 128px;float: left;margin-right: 22px;">Ամանօրյա տոներին ընդառաջ, jHunter-ը ներկայանում է բում առաջարկով։ Մինչեւ դեկտեմբերի 25-ը 10 եւ ավելի հարցում ուղարկած հաճախորդները հնարավորություն կունենան մասնակցել լրիվ նոր <strong>iPhone 6s</strong>-ի խաղարկությանը։
                     <div class="text-right" style="padding-top: 20px">
                         <span style="clear:both; display: block; visibility: hidden"></span>
-                        <a href="#portfolio" type="button" class="btn btn-info page-scroll" data-dismiss="modal">Կապնվել վիրտուալ քարտուղարների հետ</a>
+                        <a href="#portfolio" type="button" class="btn btn-info page-scroll" data-dismiss="modal">Կապնվիր քո անձնական քարտուղարին</a>
                     </div>
                 </div>
                 <!--                <div class="modal-footer">-->
