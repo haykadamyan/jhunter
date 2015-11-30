@@ -33,9 +33,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="jHunter-Անհատական վիրտուալ քարտուղար զբաղված մարդկանց համար որոնց ժամանակը ավելի քիչ է քան առօրյա անելիքները">
-    <meta name="keywords" content="jhunter, jHunter, JHUNTER, քարտուղար, օպերատոր, օգնական, անձնական օգնական, անձնական քարտուղար, անհատական օգնական, անհատական քարտուղար, վիրտուալ քարտուղար, վիրտուալ օգնական, Ձեր անձնական օգնականը, Ձեր անձնական քարտուղարը">
+    <meta name="keywords" content="jhunter, jHunter, JHUNTER, քարտուղար, օպերատոր, օգնական, անձնական օգնական, անձնական քարտուղար, անհատական օգնական, անհատական քարտուղար, վիրտուալ քարտուղար, վիրտուալ օգնական, Ձեր անձնական օգնականը, Ձեր անձնական քարտուղարը, andznakan qartughar, secretary">
 
-    <title>Անհատական վիրտուալ քարտուղար Քեզ համար</title>
+    <title>jHunter-Վիրտուալ քարտուղար Քեզ համար</title>
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
