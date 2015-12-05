@@ -18,7 +18,7 @@ global $con;
 
     <!-- Basic -->
     <meta charset="utf-8">
-    <title>Crossway - Startup Landing Page Template</title>
+    <title>jHunter - Մասնակցիր եւ շահիր iPhone 6s</title>
     <meta name="keywords" content="responsive, html5 template, one page, landing, startup, business, company, corporate, creative">
     <meta name="description" content="Crossway - Startup Landing Page Template">
     <meta charset="utf-8">

@@ -23,7 +23,7 @@
     <meta charset="utf-8">
     <title>Crossway - Startup Landing Page Template</title>
     <meta name="keywords" content="responsive, html5 template, one page, landing, startup, business, company, corporate, creative">
-    <meta name="description" content="Crossway - Startup Landing Page Template">
+    <meta name="description" content="jHunter - նորություններ">
     <meta charset="utf-8">
 
     <!-- Mobile Specific Metas -->
