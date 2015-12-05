@@ -315,7 +315,7 @@
     <script src="js/creative.js"></script>
     <script>
         $(document).ready(function(){
-//            $("#bonus").modal("show");
+            $("#bonus").modal("show");
         });
 
     </script>
