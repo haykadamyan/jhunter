@@ -94,14 +94,13 @@
                 </h2>
                 <p><span class="glyphicon glyphicon-time"></span> 5.12.2015</p>
                 <hr>
-                <img class="img-responsive" src="img/iphone.png" alt="">
-                <hr>
+                <img class="img-responsive" style="width: 200px; float: left; margin-right: 10px;" src="img/iphone.png" alt="">
                 <p>Ամանօրյա տոներին ընդառաջ, jHunter-ը ներկայանում է բում առաջարկով։ Մինչեւ դեկտեմբերի 25-ը <a href="http://thejhunter.com">www.thejhunter.com</a> անհատական վիրտուալ քարտուղարի միջոցով 10 եւ ավելի հարցում ուղարկած հաճախորդները հնարավորություն կունենան մասնակցել նոր iPhone 6s-ի խաղարկության...</p>
                 <a class="btn btn-warning" href="post.php?post_id=1">Կարդալ ավելին<span class="glyphicon glyphicon-chevron-right"></span></a>
 
-                <hr>
+                <hr style="clear: both; position:relative; top: 20px;">
                 <!-- Pager -->
-                <ul class="pager">
+                <ul class="pager" style="margin-top: 50px;">
                     <li class="previous">
                         <a href="#">&larr; Older</a>
                     </li>
@@ -114,54 +113,6 @@
 
             <!-- Blog Sidebar Widgets Column -->
             <div class="col-md-4">
-
-                <!-- Blog Search Well -->
-                <div class="well">
-                    <h4>Blog Search</h4>
-                    <div class="input-group">
-                        <input type="text" class="form-control">
-                        <span class="input-group-btn">
-                            <button class="btn btn-default" type="button">
-                                <span class="glyphicon glyphicon-search"></span>
-                        </button>
-                        </span>
-                    </div>
-                    <!-- /.input-group -->
-                </div>
-
-                <!-- Blog Categories Well -->
-                <div class="well">
-                    <h4>Blog Categories</h4>
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <ul class="list-unstyled">
-                                <li><a href="#">Category Name</a>
-                                </li>
-                                <li><a href="#">Category Name</a>
-                                </li>
-                                <li><a href="#">Category Name</a>
-                                </li>
-                                <li><a href="#">Category Name</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <!-- /.col-lg-6 -->
-                        <div class="col-lg-6">
-                            <ul class="list-unstyled">
-                                <li><a href="#">Category Name</a>
-                                </li>
-                                <li><a href="#">Category Name</a>
-                                </li>
-                                <li><a href="#">Category Name</a>
-                                </li>
-                                <li><a href="#">Category Name</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <!-- /.col-lg-6 -->
-                    </div>
-                    <!-- /.row -->
-                </div>
 
                 <!-- Side Widget Well -->
                 <div class="well">
