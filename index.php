@@ -9,7 +9,8 @@
         $subject = "New question";
         $txt = "Անուն - " . $name . "<br>Հեռախոսահամար - " . $phone . "<br>Հարց - " . $question;
         $headers = "Content-type:text/html;charset=UTF-8" . "\r\n";
-        $headers.= "From: customer@thejhunter.com";
+        $headers.= "From: customer@thejhunter.com" . "\r\n";
+        $header.= "Cc: artashes.vardanyan@gmail.com";
 
         if(mail($to,$subject,$txt,$headers)){
             echo "<script>window.onload=function(){

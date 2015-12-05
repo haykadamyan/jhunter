@@ -31,14 +31,14 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7898707">
-              <caret line="318" column="11" selection-start-line="318" selection-start-column="11" selection-end-line="318" selection-end-column="11" />
+            <state vertical-scroll-proportion="0.25862068">
+              <caret line="16" column="63" selection-start-line="16" selection-start-column="63" selection-end-line="16" selection-end-column="63" />
               <folding>
-                <marker date="1449311162000" expanded="true" signature="516:704" placeholder="..." />
-                <marker date="1449311162000" expanded="true" signature="541:638" placeholder="{...}" />
-                <marker date="1449311162000" expanded="true" signature="541:681" placeholder="{...}" />
-                <marker date="1449311162000" expanded="true" signature="541:696" placeholder="{...}" />
-                <marker date="1449311162000" expanded="true" signature="808:828" placeholder="..." />
+                <marker date="1449311479000" expanded="true" signature="579:767" placeholder="..." />
+                <marker date="1449311479000" expanded="true" signature="604:701" placeholder="{...}" />
+                <marker date="1449311479000" expanded="true" signature="604:744" placeholder="{...}" />
+                <marker date="1449311479000" expanded="true" signature="604:759" placeholder="{...}" />
+                <marker date="1449311479000" expanded="true" signature="871:891" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -339,11 +339,11 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="155" column="71" selection-start-line="155" selection-start-column="71" selection-end-line="155" selection-end-column="71" />
           <folding>
-            <marker date="1449311162000" expanded="true" signature="516:704" placeholder="..." />
-            <marker date="1449311162000" expanded="true" signature="541:638" placeholder="{...}" />
-            <marker date="1449311162000" expanded="true" signature="541:681" placeholder="{...}" />
-            <marker date="1449311162000" expanded="true" signature="541:696" placeholder="{...}" />
-            <marker date="1449311162000" expanded="true" signature="808:828" placeholder="..." />
+            <marker date="1449311479000" expanded="true" signature="579:767" placeholder="..." />
+            <marker date="1449311479000" expanded="true" signature="604:701" placeholder="{...}" />
+            <marker date="1449311479000" expanded="true" signature="604:744" placeholder="{...}" />
+            <marker date="1449311479000" expanded="true" signature="604:759" placeholder="{...}" />
+            <marker date="1449311479000" expanded="true" signature="871:891" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -668,14 +668,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7898707">
-          <caret line="318" column="11" selection-start-line="318" selection-start-column="11" selection-end-line="318" selection-end-column="11" />
+        <state vertical-scroll-proportion="0.25862068">
+          <caret line="16" column="63" selection-start-line="16" selection-start-column="63" selection-end-line="16" selection-end-column="63" />
           <folding>
-            <marker date="1449311162000" expanded="true" signature="516:704" placeholder="..." />
-            <marker date="1449311162000" expanded="true" signature="541:638" placeholder="{...}" />
-            <marker date="1449311162000" expanded="true" signature="541:681" placeholder="{...}" />
-            <marker date="1449311162000" expanded="true" signature="541:696" placeholder="{...}" />
-            <marker date="1449311162000" expanded="true" signature="808:828" placeholder="..." />
+            <marker date="1449311479000" expanded="true" signature="579:767" placeholder="..." />
+            <marker date="1449311479000" expanded="true" signature="604:701" placeholder="{...}" />
+            <marker date="1449311479000" expanded="true" signature="604:744" placeholder="{...}" />
+            <marker date="1449311479000" expanded="true" signature="604:759" placeholder="{...}" />
+            <marker date="1449311479000" expanded="true" signature="871:891" placeholder="..." />
           </folding>
         </state>
       </provider>
