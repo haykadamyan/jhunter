@@ -28,7 +28,7 @@ body {
     height: 100%;
 }
 
-hr {
+#page-top hr {
     max-width: 50px;
     border-color: #f05f40;
     border-width: 3px;
@@ -551,4 +551,12 @@ a[rel="home"]{
 
 .page-scroll{
     outline: none !important;
+}
+
+.slider-text>span{
+    display: none;
+}
+
+.slider-text>span:first-child{
+    display: block;
 }

@@ -40,7 +40,20 @@
         offset: {
             top: 100
         }
-    })
+    });
+
+    var i=1;
+
+    var sliderText = setInterval(function(){
+        if(i>=$(".slider-text").children("span").length){
+            i=0;
+        }
+
+        $(".slider-text").children("span").slideUp(500);
+        $(".slider-text").children("span").eq(i).slideDown(500);
+        i++;
+
+    }, 5000);
 
     // Initialize WOW.js Scrolling Animations
     new WOW().init();

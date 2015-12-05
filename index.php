@@ -25,7 +25,7 @@
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 
 <head>
 
@@ -154,7 +154,8 @@
             <div class="header-content-inner">
                 <h1>jHunter</h1>
                 <hr>
-                <p>Անհատական վիրտուալ քարտուղար զբաղված մարդկանց համար<br>որոնց ժամանակը ավելի քիչ է քան առօրյա անելիքները</p>
+                <p class="slider-text"><span>Անհատական վիրտուալ քարտուղար զբաղված մարդկանց համար<br>որոնց ժամանակը ավելի քիչ է քան առօրյա անելիքները</span><span>Ամրագրե'ք հյուրանոցներ, պատվիրե'ք կինոթատրոնի եւ համերգների տոմսեր, եւ այլն։</span> <span>Գտե'ք համապատասխան վարպետին Ձեր տնային խնդիրների լուծման համար։</span><span>Պայմանավորվե'ք Ձեր այցելության ժամերը ատամնաբուժարանների, գեղեցկության սրահների եւ այլ հաստատությունների հետ:</span>
+                <br><br><br>
                 <a href="#portfolio" class="btn btn-primary btn-xl page-scroll" >Կապնվեք Ձեր անձնական քարտուղարի հետ</a>
             </div>
         </div>
@@ -314,7 +315,7 @@
     <script src="js/creative.js"></script>
     <script>
         $(document).ready(function(){
-            $("#bonus").modal("show");
+//            $("#bonus").modal("show");
         });
 
     </script>

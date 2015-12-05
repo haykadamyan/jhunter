@@ -31,8 +31,9 @@
 
     <!-- Libs CSS -->
     <link href="css/bootstrap.css" rel="stylesheet">
-    <link href="css/animate.min.css" rel="stylesheet">
+    <link href="css/blog-home.css" rel="stylesheet">
     <link href="css/creative.css" rel="stylesheet">
+
 
     <!-- Template CSS -->
 
@@ -50,68 +51,145 @@
 </head>
 
 <body class="blog">
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=522813747820319";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
 
-    <div id="wt_breadcrumbs">
-        <div id="wt_breadcrumbs_wrapp" data-color="">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-12">
-                        <div class="breadcrumbs">
-                            <a href="http://localhost/blog" rel="home" class="breadcrumbs-begin">Home</a>
-                            <span class="breadcrumbs-separator">/</span>
-                            Blog
-                        </div>
-                    </div>
-                </div>
+   <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.php">jHunter</a>
             </div>
         </div>
-    </div>
+        <!-- /.container -->
+    </nav>
 
-    <div class="container body-container">
-<?php
-//
-//            $query = "SELECT * FROM `post` ORDER BY id DESC ";
-//
-//            $send_query = mysqli_query($con, $query);
+    <!-- Page Content -->
+    <div class="container">
 
-//            while($res = mysqli_fetch_assoc($send_query)){?>
-                    <div class="row">
-                        <div class="col-md-12 post all">
-                            <img src="img/iphone.png" alt="">
-                            <h3 class="post-heading">Մասնակցիր եւ շահիր iPhone 6s</h3>
-                            <div class="post-content">
-                                Ամանօրյա տոներին ընդառաջ, jHunter-ը ներկայանում է բում առաջարկով։ Մինչեւ դեկտեմբերի 25-ը <a href="http://thejhunter.com">www.thejhunter.com</a> անհատական վիրտուալ քարտուղարի միջոցով 10 եւ ավելի հարցում ուղարկած հաճախորդները հնարավորություն կունենան մասնակցել նոր iPhone 6s-ի խաղարկությանը։
-                                Խաղարկությանը մասնակցելու համար անհրաժեշտ է Ձեր առօրյա փոքր բայց ժամանակատար անելիքներըվստահել մեզ` այցելելով <a href="http://thejhunter.com">www.thejhunter.com</a> կայք ? մեր անհատական վիրտուալ քարտուղարիծառայության միջոցով հարցում ուղարկել մեր քարտուղարներից մեկին։
-                                Մեր վիրտուալ քարտուղարները կօգնեն Ձեզ իրականացնել առօրյա փոքր անելիքները, որպեսզի դուք ավելի շատ կենտրոնանաք կարեւոր անելիքների վրա, մինչ մենք կզբաղվենք մնացածով, ինչպես նաեւ հնարավորություն ունենալ շահելու: Մենք ձեզ կօգնենք գտնել վարպետներ Ձեր տնային խնդիրների լուծման, տարբեր իրերի վերանորոգման համար, պայմանավորվել այցելության ժամերը ատամնաբուժարաններ, գեղեցկության սրահներ, այլ հաստատություններ, այլամրագրել հյուրանոցներ, պատվիրել կինոթատրոնի եւ համերգների տոմսեր, ստանալ տեղեկատվոիթյուն ինքնաթիռների չվացուցակի մասին, ինչպես նաեւ տարբեր միջոցառումների անցկացման վայրի ու տեղի մասին, իրականացնել տարբեր փոքրածավալ իրերի տեղափոխում (ծրարներ, փաստաթղթեր, հաշիվ ապրանքագրեր) Երեւան քաղաքի տարածքում եւ այս ամենին գումարած նաեւ շահել iPhone 6s: Հավելյալ նշենք, որ շահողը լինելու է միայն մեկը, որին մենք Դեկտեմբերի 28-ին կհրավիրենք մեր գրասենյակ շահումը ստանալու:
-                            </div>
-                            <a href="post.php?post_id=1">Կարդալ ավելին<i class="fa fa-angle-double-right"></i></a>
-                        </div>
+        <div class="row">
+
+            <!-- Blog Entries Column -->
+            <div class="col-md-8">
+
+                <h1 class="page-header">
+                    Նորություններ
+                </h1>
+
+                <!-- First Blog Post -->
+                <h2>
+                    <a href="post.php">Մասնակցիր եւ շահիր iPhone 6s</a>
+                </h2>
+                <p><span class="glyphicon glyphicon-time"></span> 5.12.2015</p>
+                <hr>
+                <img class="img-responsive" src="img/iphone.png" alt="">
+                <hr>
+                <p>Ամանօրյա տոներին ընդառաջ, jHunter-ը ներկայանում է բում առաջարկով։ Մինչեւ դեկտեմբերի 25-ը <a href="http://thejhunter.com">www.thejhunter.com</a> անհատական վիրտուալ քարտուղարի միջոցով 10 եւ ավելի հարցում ուղարկած հաճախորդները հնարավորություն կունենան մասնակցել նոր iPhone 6s-ի խաղարկության...</p>
+                <a class="btn btn-warning" href="post.php?post_id=1">Կարդալ ավելին<span class="glyphicon glyphicon-chevron-right"></span></a>
+
+                <hr>
+                <!-- Pager -->
+                <ul class="pager">
+                    <li class="previous">
+                        <a href="#">&larr; Older</a>
+                    </li>
+                    <li class="next">
+                        <a href="#">Newer &rarr;</a>
+                    </li>
+                </ul>
+
+            </div>
+
+            <!-- Blog Sidebar Widgets Column -->
+            <div class="col-md-4">
+
+                <!-- Blog Search Well -->
+                <div class="well">
+                    <h4>Blog Search</h4>
+                    <div class="input-group">
+                        <input type="text" class="form-control">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="button">
+                                <span class="glyphicon glyphicon-search"></span>
+                        </button>
+                        </span>
                     </div>
+                    <!-- /.input-group -->
+                </div>
 
+                <!-- Blog Categories Well -->
+                <div class="well">
+                    <h4>Blog Categories</h4>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <ul class="list-unstyled">
+                                <li><a href="#">Category Name</a>
+                                </li>
+                                <li><a href="#">Category Name</a>
+                                </li>
+                                <li><a href="#">Category Name</a>
+                                </li>
+                                <li><a href="#">Category Name</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- /.col-lg-6 -->
+                        <div class="col-lg-6">
+                            <ul class="list-unstyled">
+                                <li><a href="#">Category Name</a>
+                                </li>
+                                <li><a href="#">Category Name</a>
+                                </li>
+                                <li><a href="#">Category Name</a>
+                                </li>
+                                <li><a href="#">Category Name</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- /.col-lg-6 -->
+                    </div>
+                    <!-- /.row -->
+                </div>
 
-<!--        <div class="row">-->
-<!--            <div class="col-md-12 post">-->
-<!--                <img src="http://dsathemes.com/html/crossway/multi_page/fixed_menu/img/blog/img5.jpg" alt="">-->
-<!--                <h3 class="post-heading">Standard post with Single Image</h3>-->
-<!--                <div class="post-content">-->
-<!--                    Etiam condimentum sapien ut sem condimentum accumsan. Proin in adipiscing elit. Proin lobortis molestie ante quis consequat. Sed ac pulvinar eros.-->
-<!--                    Suspendisse cursus risus laoreet turpis auctor, nec pharetra massa varius. Suspendisse dignissim sollicitudin sem, id ornare elit aliquam&ensp;-->
-<!--                    Etiam condimentum sapien ut sem condimentum accumsan. Proin in adipiscing elit. Proin lobortis molestie ante quis consequat. Sed ac pulvinar eros.-->
-<!--                    Suspendisse cursus risus laoreet turpis auctor, nec pharetra massa varius. Suspendisse dignissim sollicitudin sem, id ornare elit aliquam&ensp;-->
-<!--                    Etiam condimentum sapien ut sem condimentum accumsan. Proin in adipiscing elit. Proin lobortis molestie ante quis consequat. Sed ac pulvinar eros.-->
-<!--                    Suspendisse cursus risus laoreet turpis auctor, nec pharetra massa varius. Suspendisse dignissim sollicitudin sem, id ornare elit aliquam&ensp;-->
-<!--                    Etiam condimentum sapien ut sem condimentum accumsan. Proin in adipiscing elit. Proin lobortis molestie ante quis consequat. Sed ac pulvinar eros.-->
-<!--                    Suspendisse cursus risus laoreet turpis auctor, nec pharetra massa varius. Suspendisse dignissim sollicitudin sem, id ornare elit aliquam&ensp;-->
-<!--                    Etiam condimentum sapien ut sem condimentum accumsan. Proin in adipiscing elit. Proin lobortis molestie ante quis consequat. Sed ac pulvinar eros.-->
-<!--                    Suspendisse cursus risus laoreet turpis auctor, nec pharetra massa varius. Suspendisse dignissim sollicitudin sem, id ornare elit aliquam&ensp;-->
-<!--                    Etiam condimentum sapien ut sem condimentum accumsan. Proin in adipiscing elit. Proin lobortis molestie ante quis consequat. Sed ac pulvinar eros.-->
-<!--                    Suspendisse cursus risus laoreet turpis auctor, nec pharetra massa varius. Suspendisse dignissim sollicitudin sem, id ornare elit aliquam&ensp;-->
-<!--                </div>-->
-<!--                <a href="single-post.html">Read More <i class="fa fa-angle-double-right"></i></a>-->
-<!--            </div>-->
-<!--        </div>-->
+                <!-- Side Widget Well -->
+                <div class="well">
+                    <h4>Միացեք մեզ facebook-ում</h4>
+                    <p>
+                    <div class="fb-page" data-href="https://www.facebook.com/yourhelptoday" data-width="500" data-height="200" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/yourhelptoday"><a href="https://www.facebook.com/yourhelptoday">JHunter-անհատական վիրտուալ քարտուղար</a></blockquote></div></div>                    </p>
+                </div>
+
+            </div>
+
+        </div>
+        <!-- /.row -->
+
+        <hr>
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>&copy jHunter բոլոր իրավունքները պաշտպանված են։</p>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+        </footer>
 
     </div>
-
+    <script type="js/jquery.js"></script>
+    <script type="js/bootstrap.js"></script>
 </body>
 </html>
