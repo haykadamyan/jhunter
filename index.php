@@ -157,7 +157,7 @@
                 <hr>
                 <p class="slider-text"><span>Անհատական վիրտուալ քարտուղար զբաղված մարդկանց համար որոնց ժամանակը ավելի քիչ է քան առօրյա անելիքները</span><span>Ամրագրե'ք հյուրանոցներ, պատվիրե'ք կինոթատրոնի եւ համերգների տոմսեր, եւ այլն։</span> <span>Գտե'ք համապատասխան վարպետին<br> Ձեր տնային խնդիրների լուծման համար։</span><span>Պայմանավորվե'ք Ձեր այցելության ժամերը ատամնաբուժարանների, գեղեցկության սրահների<br> եւ այլ հաստատությունների հետ:</span>
                 <br><br><br>
-                <a href="#portfolio" class="btn btn-primary btn-xl page-scroll" >Կապնվեք Ձեր անձնական քարտուղարի հետ</a>
+                <a href="#portfolio" class="btn btn-primary btn-xl page-scroll wow tada" >Կապնվեք Ձեր անձնական քարտուղարի հետ</a>
             </div>
         </div>
     </header>
@@ -213,7 +213,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Կապնվեք Ձեր անձնական քարտուղարի հետ</h2>
+                    <h2 class="section-heading wow pulse" data-wow-delay="300ms" data-wow-iteration="infinite">Կապնվեք Ձեր անձնական քարտուղարի հետ</h2>
                     <hr class="primary">
                 </div>
             </div>
