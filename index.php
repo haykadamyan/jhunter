@@ -73,7 +73,7 @@
                     <h4 class="modal-title">Բում խաղարկություն</h4>
                 </div>
                 <div class="modal-body">
-                    <img src="img/iphone.png" style="width: 128px;float: left;margin-right: 22px;">Ամանօրյա տոներին ընդառաջ, jHunter-ը ներկայանում է բում առաջարկով։ Մինչեւ դեկտեմբերի 25-ը 10 եւ ավելի հարցում ուղարկած հաճախորդները հնարավորություն կունենան մասնակցել լրիվ նոր <strong>iPhone 6s</strong>-ի խաղարկությանը։
+                    <img src="img/iphone.png" style="width: 128px;float: left;margin-right: 22px;">Ամանօրյա տոներին ընդառաջ, jHunter-ը ներկայանում է բում առաջարկով։ Մինչեւ դեկտեմբերի 25-ը 10 եւ ավելի հարցում ուղարկած հաճախորդները հնարավորություն կունենան մասնակցել լրիվ նոր <strong>iPhone 6s</strong>-ի խաղարկությանը։ Նշենք որ ծառայությունը ամբողջովին <strong>ԱՆՎՃԱՐ</strong> է։
                     <div class="text-right" style="padding-top: 20px">
                         <span style="clear:both; display: block; visibility: hidden"></span>
                         <a href="#portfolio" type="button" class="btn btn-info page-scroll" data-dismiss="modal">Կապնվիր քո անձնական քարտուղարին</a>
