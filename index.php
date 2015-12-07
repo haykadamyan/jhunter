@@ -138,7 +138,7 @@
                         <a class="page-scroll" href="#services">Ինչպե՞ս է այն աշխատում</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#portfolio">Քարտուղարներ</a>
+                        <a class="page-scroll" href="#portfolio" style="background-color: white; color: #F05F40;">Կապնվեք Ձեր անձնական քարտուղարին հենց հիմա</a>
                     </li>
                     <li>
                         <a class="page-scroll" target="_blank" href="blog.php">Նորություններ</a>
@@ -155,9 +155,8 @@
             <div class="header-content-inner">
                 <h1>jHunter</h1>
                 <hr>
-                <p class="slider-text"><span>Անհատական վիրտուալ քարտուղար զբաղված մարդկանց համար որոնց ժամանակը ավելի քիչ է քան առօրյա անելիքները</span><span>Ամրագրե'ք հյուրանոցներ, պատվիրե'ք կինոթատրոնի եւ համերգների տոմսեր, եւ այլն։</span> <span>Գտե'ք համապատասխան վարպետին<br> Ձեր տնային խնդիրների լուծման համար։</span><span>Պայմանավորվե'ք Ձեր այցելության ժամերը ատամնաբուժարանների, գեղեցկության սրահների<br> եւ այլ հաստատությունների հետ:</span>
-                <br><br><br>
-                <a href="#portfolio" class="btn btn-primary btn-xl page-scroll wow tada" >Կապնվեք Ձեր անձնական քարտուղարի հետ</a>
+                <p class="slider-text"><span>Անհատական վիրտուալ քարտուղար զբաղված մարդկանց համար որոնց ժամանակը ավելի քիչ է քան առօրյա անելիքները</span><span>Ամրագրե'ք հյուրանոցներ, պատվիրե'ք կինոթատրոնի եւ համերգների տոմսեր, եւ այլն։</span> <span>Գտե'ք համապատասխան վարպետին<br> Ձեր տնային խնդիրների լուծման համար։</span><span>Պայմանավորվե'ք Ձեր այցելության ժամերը ատամնաբուժարանների, գեղեցկության սրահների<br> եւ այլ հաստատությունների հետ:</span></p>
+                <a href="#portfolio" class="btn btn-primary btn-xl page-scroll wow tada" style="position: relative;top:10px;">Կապնվեք Ձեր անձնական քարտուղարի հետ</a>
             </div>
         </div>
     </header>

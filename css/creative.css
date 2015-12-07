@@ -553,6 +553,10 @@ a[rel="home"]{
     outline: none !important;
 }
 
+.slider-text{
+    height: 153px;
+}
+
 .slider-text>span{
     display: none;
 }
