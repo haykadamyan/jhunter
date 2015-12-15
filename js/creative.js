@@ -44,20 +44,20 @@
 
     var i=1;
 
-    var sliderText = setInterval(function(){
+    // var sliderText = setInterval(function(){
 
 
-        $(".slider-text").children("span").slideUp(500);
-        setTimeout(function(){
-            $(".slider-text").children("span").eq(i).slideDown(500);
-        },500);
+    //     $(".slider-text").children("span").slideUp(500);
+    //     setTimeout(function(){
+    //         $(".slider-text").children("span").eq(i).slideDown(500);
+    //     },500);
 
-        i++;
-        if(i>=$(".slider-text").children("span").length){
-            i=0;
-        }
+    //     i++;
+    //     if(i>=$(".slider-text").children("span").length){
+    //         i=0;
+    //     }
 
-    }, 5000);
+    // }, 5000);
 
     // Initialize WOW.js Scrolling Animations
     new WOW().init();

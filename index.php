@@ -1,27 +1,28 @@
 <?php
 
     if(isset($_POST['submit_question'])){
-        $name = $_POST['name'];
+        $from = $_POST['from'];
+        $toAddress = $_POST['to'];
         $phone = $_POST['phone'];
-        $question = $_POST['question'];
+        $box = $_POST['box'];
+        $message = $_POST['message'];
+        $product = $_POST['product'];
+
 
         $to = "drprog00@gmail.com";
         $subject = "New question";
-        $txt = "Անուն - " . $name . "<br>Հեռախոսահամար - " . $phone . "<br>Հարց - " . $question;
+        $txt = "Որտեղից - " . $from . "<br>Որտեղ - " . $toAddress . "<br>Հեռախոսահամար - " . $phone . "<br>Փաթեթ - " . $box . "<br>Ծրար - " . $message . "<br>Այլ - " . $product;
         $headers = "Content-type:text/html;charset=UTF-8" . "\r\n";
         $headers.= "From: customer@thejhunter.com" . "\r\n";
-        $header.= "Cc: artashes.vardanyan@gmail.com";
+        // $header.= "Cc: artashes.vardanyan@gmail.com";
 
         if(mail($to,$subject,$txt,$headers)){
             echo "<script>window.onload=function(){
             $.notify('Ձեր հարցումը կատարված է, մենք Ձեզ կզանգահարենք մի քանի րոպեի ընդացկում:',{position:'top-left', className:'success'});
             }</script>";
-        }
+        } 
 
     }
-
-
-
 
 ?>
 
@@ -36,7 +37,7 @@
     <meta name="description" content="jHunter-Անհատական վիրտուալ քարտուղար զբաղված մարդկանց համար որոնց ժամանակը ավելի քիչ է քան առօրյա անելիքները">
     <meta name="keywords" content="jhunter, jHunter, JHUNTER, քարտուղար, օպերատոր, օգնական, անձնական օգնական, անձնական քարտուղար, անհատական օգնական, անհատական քարտուղար, վիրտուալ քարտուղար, վիրտուալ օգնական, Ձեր անձնական օգնականը, Ձեր անձնական քարտուղարը,օնլայն,օնլայն քարտուղար, օնլայն օգնական, օնլայն անհատական օգնական, օնլայն անհատական քարտուղար, andznakan qartughar, secretary, online, online secretary, online qartughar, online andznakan qartughar, online personal secretary, virtual secretary, անհատական, անհատական քարտուղար, անհատական օգնական">
 
-    <title>jHunter-Վիրտուալ քարտուղար Քեզ համար</title>
+    <title>jHunter-կուրիերային ծառայություն</title>
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
@@ -94,14 +95,32 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">Կապնվեք Ձեր անձնական քարտուղարի հետ հենց հիմա</h4>
+                    <h4 class="modal-title">Պատվիրեք առաքում հենց հիմա</h4>
                 </div>
                 <div class="modal-body">
-                    <form action="" method="post">
-                        <input type="text" required name="name" class="form-control" placeholder="Անուն"><br>
-                        <input type="text" required name="phone" class="form-control" placeholder="Հեռախոսահամար"><br>
-                        <textarea class="form-control" required style="resize: vertical; min-height: 130px; max-height: 300px;" name="question" placeholder="Ողջույն ինչո՞վ կարող եմ Ձեզ օգնել"></textarea>
-                        <div class="text-right" style="padding-top: 20px">
+                    <form action="" class="form-inline text-center" method="post">
+                        <div class="row">
+                            <div class="col-md-5 text-left">
+                                <span class="h3">Որտեղից</span><br><br>
+                                <input type="text" required name="from" class="form-control" placeholder="Օր.՝ Ցիտադել բիզնես կենտրոն">
+                            </div>
+                            <div class="col-md-2 text-center">
+                                <br><br><hr>
+                            </div>
+                            <div class="col-md-5 text-right">
+                                <span class="h3">Որտեղ</span><br><br>
+                                <input type="text" required name="to" class="form-control" placeholder="Օր.՝ Երազ բիզնես կենտրոն"><br><br>                            
+                            </div>
+                        
+                        </div>
+                        <input type="text" required name="phone" class="form-control" placeholder="Հեռախոսահամար"><br><br>
+                        <div class="row">
+                            <span class="h3">Ի՞նչ պետք է առաքել</span><br><br>
+                            <label for="box">Փաթեթ։</label> <input type="checkbox" id="box" name="box">&nbsp
+                            <label for="message">Ծրար։</label> <input type="checkbox" id="message" name="message">&nbsp
+                            <label for="product">Այլ։</label> <input type="checkbox" id="product" name="product">
+                        </div>
+                        <div class="text-right modal-footer" style="margin-top: 20px">
                             <button type="submit" name="submit_question" class="btn btn-warning">Ուղարկել</button>
                             <button type="button" class="btn btn-info" data-dismiss="modal">Փակել</button>
                         </div>
@@ -138,7 +157,7 @@
                         <a class="page-scroll" href="#services">Ինչպե՞ս է այն աշխատում</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#portfolio" style="background-color: white; color: #F05F40;">Կապնվեք Ձեր անձնական քարտուղարին հենց հիմա</a>
+                        <a class="page-scroll" href="#portfolio" style="background-color: white; color: #F05F40;">Մեր հաճախորդները սիրում են մեզ</a>
                     </li>
                     <li>
                         <a class="page-scroll" target="_blank" href="blog.php">Նորություններ</a>
@@ -155,8 +174,8 @@
             <div class="header-content-inner">
                 <h1>jHunter</h1>
                 <hr>
-                <p class="slider-text"><span>Անհատական վիրտուալ քարտուղար զբաղված մարդկանց համար որոնց ժամանակը ավելի քիչ է քան առօրյա անելիքները</span><span>Ամրագրե'ք հյուրանոցներ, պատվիրե'ք կինոթատրոնի եւ համերգների տոմսեր, եւ այլն։</span> <span>Գտե'ք համապատասխան վարպետին<br> Ձեր տնային խնդիրների լուծման համար։</span><span>Պայմանավորվե'ք Ձեր այցելության ժամերը ատամնաբուժարանների, գեղեցկության սրահների<br> եւ այլ հաստատությունների հետ:</span></p>
-                <a href="#portfolio" class="btn btn-primary btn-xl page-scroll wow tada" style="position: relative;top:10px;">Կապնվեք Ձեր անձնական քարտուղարի հետ</a>
+                <p class="slider-text"><span>Վստահեք մեզ Ձեր իրերի փոխադրումը</span>
+                <a href="javascript:void()" class="btn btn-primary btn-xl page-scroll wow tada" data-toggle="modal" data-target="#online-order"  style="position: relative;top:10px;">Պատվիրեք առաքում հենց հիմա</a>
             </div>
         </div>
     </header>
@@ -165,16 +184,17 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="section-heading">Մենք կլուծենք Ձեր առօրյա խնդիրները</h2>
+                    <h2 class="section-heading">Մեր մասին</h2>
                     <hr class="light">
-                    <p class="text-justify">Ձեր առօրյա փոքր բայց ժամանակատար անելիքները պետք է կատարվեն, բայց ոչ պարտադիր հենց Ձեր կողմից։ Մեր վիրտուալ քարտուղարները կօգնեն Ձեզ իրականացնել առօրյա փոքր անելիքները, որպեսզի դուք ավելի շատ կենտրոնանաք կարևոր անելիքների վրա, մինչ մենք կզբաղվենք մնացածով։</p>
+                    <p class="text-justify">Մոռացել եք Ձեր իրե՞րը։ Միգուցե պետք է կարճ ժամանակում կարևոր փաստաթղթե՞ր փոխանցել։ Կամ հայտնվել եք իրավիճակում, որտեղ կողքից օգնությու՞ն է անհրաժեշտ։ Դիմե՛ք մեզ, և մենք կօգնենք Ձեզ, կտեղափոխենք Ձեզ իրերը, կկատարենք ցանկացած առաքում 15-20 րոպեում։</p>                
                     <!--<a href="#" class="btn btn-default btn-xl">Get Started!</a>-->
-                    <strong class="h1">(094) 35 12 32</strong>
+                    <!-- <strong class="h1">(094) 35 12 32</strong> -->
+                    <a href="javascript:void()" class="btn btn-primary btn-xl page-scroll wow tada" data-toggle="modal" data-target="#online-order"  style="position: relative;top:10px;">Պատվիրեք առաքում հենց հիմա</a>
                 </div>
             </div>
         </div>
     </section>
-
+    
     <section class="bg-primary" id="services">
         <div class="container">
             <div class="row">
@@ -189,19 +209,19 @@
                 <div class="col-lg-4 col-md-6 text-center">
                     <div class="service-box">
                         <i class="fa fa-4x fa-laptop wow bounceIn text-primary"></i>
-                        <h3>Կապնվեք Ձեր անձնական քարտուղարի հետ</h3>
+                        <h3>Մեզ ուղարկեք պատվերը</h3>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 text-center">
                     <div class="service-box">
-                        <i class="fa fa-4x fa-comments-o wow bounceIn text-primary" data-wow-delay=".1s"></i>
-                        <h3>Բացատրեք Ձեր խնդիրը</h3>
+                        <i class="fa fa-4x fa-bicycle wow bounceIn text-primary" data-wow-delay=".1s"></i>
+                        <h3>Սպասեք առաքմանը</h3>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 text-center">
                     <div class="service-box">
                         <i class="fa fa-4x fa-thumbs-o-up wow bounceIn text-primary" data-wow-delay=".3s"></i>
-                        <h3>Ձեր խնդիրը լուծված է</h3>
+                        <h3>Ձեր առաքումը կատարված է</h3>
                     </div>
                 </div>
             </div>
@@ -212,7 +232,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading wow pulse" data-wow-delay="300ms" data-wow-iteration="infinite">Կապնվեք Ձեր անձնական քարտուղարի հետ</h2>
+                    <h2 class="section-heading wow pulse" data-wow-delay="300ms" data-wow-iteration="infinite">Մեր հաճախորդները սիրում են մեզ</h2>
                     <hr class="primary">
                 </div>
             </div>
@@ -220,65 +240,47 @@
                     <div class="col-lg-4 col-sm-6 assistant">
                         <div class="assistant-info">
                             <img src="img/assistants/1.jpg" class="img-responsive assistant-picture" alt="">
-                            <div class="stars text-center">
-                                <span class="fa fa-star custom-star"></span>
-                                <span class="fa fa-star custom-star"></span>
-                                <span class="fa fa-star custom-star"></span>
-                                <span class="fa fa-star custom-star"></span>
-                                <span class="fa fa-star-half-o custom-star"></span>
-                            </div>
                         </div>
-                        <span class="assistant-text assistant-name h3">Լուսինե</span>
-                        <strong class="assistant-text">Ես Ձեզ կօգնեմ ամրագրել՝ հյուրանոցներ, պատվիրել կինոթատրոնի եւ համերգների տոմսեր, եւ այլն։ Ինձնից արդեն գոհ է 497 հաճախորդ։</strong>
-                        <a href="javascript:void()"  data-toggle="modal" data-target="#online-order" class="btn btn-warning wow tada">Կապնվել Լուսինեի հետ</a>
+                        <span class="assistant-text assistant-name h3">Գեւորգ</span>
+                        <strong class="assistant-text">Ես աշխատանքի բնույթով հաճախ եմ կապնվում մեր ընկերության մասնաճյուղերի հետ՝ փաստաթղթեր փոխանցելու համար։ jHunter-ը դա կատարում է շատ արագ։</strong>
+                    </div>
+
+                     <div class="col-lg-4 col-sm-6 assistant">
+                        <div class="assistant-info">
+                            <img src="img/assistants/3.jpg" class="img-responsive assistant-picture" alt="">
+                        </div>
+                        <span class="assistant-text assistant-name h3">Մարիամ</span>
+                        <!--<strong class="assistant-text">Ես աշխատանքի բնույթով հաճախ եմ կապնվում մեր ընկերության մասնաճյուղերի հետ՝ փաստաթղթեր փոխանցելու համար։ jHunter-ը դա կատարում է շատ արագ։</strong>-->
+                        <strong class="assistant-text">Մեր տպարանի հաճախորդներին հաճախ պետք է լինում առաքել պատվերները, և jHunter-ի շնորհիվ մենք սեփական առաքիչների կարիք չունենք։</strong>
                     </div>
 
                     <div class="col-lg-4 col-sm-6 assistant">
                         <div class="assistant-info">
                             <img src="img/assistants/2.jpg" class="img-responsive assistant-picture" alt="">
-                            <div class="stars text-center">
-                                <span class="fa fa-star custom-star"></span>
-                                <span class="fa fa-star custom-star"></span>
-                                <span class="fa fa-star custom-star"></span>
-                                <span class="fa fa-star custom-star"></span>
-                                <span class="fa fa-star-half-o custom-star"></span>
-                            </div>
                         </div>
                         <span class="assistant-text assistant-name h3">Կարեն</span>
-                        <strong class="assistant-text">Ես Ձեզ կօգնեմ գտնել համապատասխան վարպետին Ձեր տնային խնդիրների լուծման համար։ Ինձնից գոհ է 693 հաճախորդ։</strong>
-
-                        <a href="javascript:void()" data-wow-delay="1s" data-toggle="modal" data-target="#online-order" class="btn btn-warning wow tada">Կապնվել Կարենի հետ</a>
+                        <!--<strong class="assistant-text">Ես աշխատանքի բնույթով հաճախ եմ կապնվում մեր ընկերության մասնաճյուղերի հետ՝ փաստաթղթեր փոխանցելու համար։ jHunter-ը դա կատարում է շատ արագ։</strong>-->
+                        <strong class="assistant-text">Երբ պիտի գործուղման գնայի, օդանավակայանում միայն հիշեցի, որ մոռացել եմ անձնագիրս։ Ընդամենը մի զանգ jHunter-ին և 20 րոպեից այն իմ գրպանում էր։</strong>
                     </div>
 
-                    <div class="col-lg-4 col-sm-6 assistant">
-                        <div class="assistant-info">
-                            <img src="img/assistants/3.jpg" class="img-responsive assistant-picture" alt="">
-                            <div class="stars text-center">
-                                <span class="fa fa-star custom-star"></span>
-                                <span class="fa fa-star custom-star"></span>
-                                <span class="fa fa-star custom-star"></span>
-                                <span class="fa fa-star custom-star"></span>
-                                <span class="fa fa-star custom-star"></span>
-                            </div>
-                        </div>
-                        <span class="assistant-text assistant-name h3">Մարիամ</span>
-                        <strong class="assistant-text">Ես կպայմանավորվեմ Ձեր այցելության ժամերը ատամնաբուժարանների, գեղեցկության սրահների եւ այլ հաստատությունների հետ։</strong>
-                        <a href="javascript:void()" data-wow-delay="2s" data-toggle="modal" data-target="#online-order" class="btn btn-warning wow tada">Կապնվել Մարիամի հետ</a>
-                    </div>
+            </div>
+            <div class="text-center">
+            <span class="h3">Դուք էլ միացեք նրանց շարքերին<br>եւ</span><br><br>
+                <a href="javascript:void()" class="btn btn-primary btn-xl page-scroll wow tada" data-toggle="modal" data-target="#online-order">պատվիրեք առաքում հենց հիմա</a>                    
             </div>
         </div>
     </section>
-
+<!--  Footer
     <aside class="bg-dark">
         <div class="container text-center">
             <div class="call-to-action">
                 <h2>Այլեւս մի վատնեք  Ձեր ժամանկը, ԶԱՆԳԱՀԱՐԵ'Ք</h2>
-                <!--<a href="#" class="btn btn-default btn-xl wow tada">Download Now!</a>-->
+                <a href="#" class="btn btn-default btn-xl wow tada">Download Now!</a>
                 <strong class="h1 wow bounceInUp">(094) 35 12 32</strong>
             </div>
         </div>
     </aside>
-
+ -->
     <!--<section id="contact">-->
         <!--<div class="container">-->
             <!--<div class="row">-->
@@ -314,9 +316,9 @@
     <!-- Custom Theme JavaScript -->
     <script src="js/creative.js"></script>
     <script>
-        $(document).ready(function(){
-            $("#bonus").modal("show");
-        });
+        // $(document).ready(function(){
+        //     $("#bonus").modal("show");
+        // });
 
     </script>
 
