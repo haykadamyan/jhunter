@@ -1,5 +1,19 @@
 <?php
 
+    require "./twillo/Services/Twillo.php";
+
+    $account_sid = "AC0b69689e9dfcbee0613dc8e2a6db789a"; // Your Twilio account sid
+    $auth_token = "3f33637b2fffb5a6ee794b0175b162f3"; // Your Twilio auth token
+
+    $client = new Services_Twilio($account_sid, $auth_token);
+    $message = $client->account->messages->sendMessage(
+      '+14085551234', // From a Twilio number in your account
+      '+12125551234', // Text any number
+      "Hello monkey!"
+    );
+
+print $message->sid;
+
     if(isset($_POST['submit_question'])){
         $from = $_POST['from'];
         $toAddress = $_POST['to'];
