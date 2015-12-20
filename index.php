@@ -1,18 +1,6 @@
 <?php
 
-    require "./twillo/Services/Twillo.php";
 
-    $account_sid = "AC0b69689e9dfcbee0613dc8e2a6db789a"; // Your Twilio account sid
-    $auth_token = "3f33637b2fffb5a6ee794b0175b162f3"; // Your Twilio auth token
-
-    $client = new Services_Twilio($account_sid, $auth_token);
-    $message = $client->account->messages->sendMessage(
-      '+14085551234', // From a Twilio number in your account
-      '+12125551234', // Text any number
-      "Hello monkey!"
-    );
-
-print $message->sid;
 
     if(isset($_POST['submit_question'])){
         $from = $_POST['from'];
@@ -188,7 +176,7 @@ print $message->sid;
             <div class="header-content-inner">
                 <h1>jHunter</h1>
                 <hr>
-                <p class="slider-text"><span>Վստահեք մեզ Ձեր իրերի փոխադրումը</span>
+                <p class="slider-text"><span>Վստահեք մեզ Ձեր փաթեթների, ծրարների <br>եւ փաստաթղթերի փոխադրումը փոխադրումը</span>
                 <a href="javascript:void()" class="btn btn-primary btn-xl page-scroll wow tada" data-toggle="modal" data-target="#online-order"  style="position: relative;top:10px;">Պատվիրեք առաքում հենց հիմա</a>
             </div>
         </div>
@@ -200,7 +188,7 @@ print $message->sid;
                 <div class="col-lg-8 col-lg-offset-2 text-center">
                     <h2 class="section-heading">Մեր մասին</h2>
                     <hr class="light">
-                    <p class="text-justify">Մոռացել եք Ձեր իրե՞րը։ Միգուցե պետք է կարճ ժամանակում կարևոր փաստաթղթե՞ր փոխանցել։ Կամ հայտնվել եք իրավիճակում, որտեղ կողքից օգնությու՞ն է անհրաժեշտ։ Դիմե՛ք մեզ, և մենք կօգնենք Ձեզ, կտեղափոխենք Ձեզ իրերը, կկատարենք ցանկացած առաքում 15-20 րոպեում։</p>                
+                    <p class="text-justify">Մոռացել եք Ձեր իրե՞րը։ Միգուցե պետք է կարճ ժամանակում կարևոր փաստաթղթե՞ր փոխանցել։ Դիմե՛ք մեզ, և մենք կօգնենք Ձեզ, կտեղափոխենք Ձեզ իրերը, կկատարենք ցանկացած առաքում կարճ ժամանակում։</p>                
                     <!--<a href="#" class="btn btn-default btn-xl">Get Started!</a>-->
                     <!-- <strong class="h1">(094) 35 12 32</strong> -->
                     <a href="javascript:void()" class="btn btn-primary btn-xl page-scroll wow tada" data-toggle="modal" data-target="#online-order"  style="position: relative;top:10px;">Պատվիրեք առաքում հենց հիմա</a>
@@ -223,7 +211,7 @@ print $message->sid;
                 <div class="col-lg-4 col-md-6 text-center">
                     <div class="service-box">
                         <i class="fa fa-4x fa-laptop wow bounceIn text-primary"></i>
-                        <h3>Մեզ ուղարկեք պատվերը</h3>
+                        <h3>Ուղարկեք պատվերը</h3>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 text-center">
