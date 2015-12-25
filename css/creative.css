@@ -57,7 +57,7 @@ p {
 }
 
 .bg-primary {
-    background-color: #f05f40;
+    background-color: #3B3B3B;
 }
 
 .bg-dark {
@@ -82,7 +82,7 @@ aside {
 }
 
 #mainNav{
-    background-color: #f05f40;
+    background-color: #3B3B3B;
 }
 
 .navbar-default {
@@ -184,8 +184,8 @@ header {
     width: 100%;
     min-height: auto;
     text-align: center;
-    color: #fff;
-    background-image: url(../img/header.jpg);
+    color: #4F4F4F;
+    background-image: url(../img/header.png);
     background-position: center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -393,7 +393,7 @@ fieldset[disabled] .btn-default.active {
 .btn-primary {
     border-color: #f05f40;
     color: #fff;
-    background-color: #f05f40;
+    background-color: #3B3B3B;
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
     transition: all .35s;
@@ -407,7 +407,7 @@ fieldset[disabled] .btn-default.active {
 .open > .dropdown-toggle.btn-primary {
     border-color: #ed431f;
     color: #fff;
-    background-color: #ee4b28;
+    background-color: #5F5F5F;
 }
 
 .btn-primary:active,

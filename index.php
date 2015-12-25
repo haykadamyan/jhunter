@@ -1,22 +1,24 @@
 <?php
 
-
-
     if(isset($_POST['submit_question'])){
         $from = $_POST['from'];
         $toAddress = $_POST['to'];
         $phone = $_POST['phone'];
+        $email = $_POST['email'];
         $box = $_POST['box'];
         $message = $_POST['message'];
         $product = $_POST['product'];
 
+  
+
+ 
 
         $to = "drprog00@gmail.com";
         $subject = "New question";
-        $txt = "Որտեղից - " . $from . "<br>Որտեղ - " . $toAddress . "<br>Հեռախոսահամար - " . $phone . "<br>Փաթեթ - " . $box . "<br>Ծրար - " . $message . "<br>Այլ - " . $product;
+        $txt = "Որտեղից - " . $from . "<br>Որտեղ - " . $toAddress . "<br>Հեռախոսահամար - " . $phone . "<br>Էլ. հասցե - " . $email . "<br>Փաթեթ - " . $box . "<br>Ծրար - " . $message . "<br>Այլ - " . $product;
         $headers = "Content-type:text/html;charset=UTF-8" . "\r\n";
         $headers.= "From: customer@thejhunter.com" . "\r\n";
-        // $header.= "Cc: artashes.vardanyan@gmail.com";
+        $headers.= "Cc: artashes.vardanyan@gmail.com" . "\r\n";
 
         if(mail($to,$subject,$txt,$headers)){
             echo "<script>window.onload=function(){
@@ -66,6 +68,8 @@
 
 <body id="page-top">
 
+
+
     <div id="bonus" class="modal fade" role="dialog">
         <div class="modal-dialog">
 
@@ -90,10 +94,9 @@
         </div>
     </div>
 
-    <div id="online-order" class="modal fade" role="dialog">
+  <!-- <div id="online-order" class="modal fade" role="dialog">
         <div class="modal-dialog">
 
-            <!-- Modal content-->
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
@@ -128,13 +131,11 @@
                         </div>
                     </form>
                 </div>
-<!--                <div class="modal-footer">-->
-<!--                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>-->
-<!--                </div>-->
+
             </div>
 
         </div>
-    </div>
+    </div> --> 
 
     <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid" >
@@ -162,7 +163,7 @@
                         <a class="page-scroll" href="#portfolio" style="background-color: white; color: #F05F40;">Մեր հաճախորդները սիրում են մեզ</a>
                     </li>
                     <li>
-                        <a class="page-scroll" target="_blank" href="blog.php">Նորություններ</a>
+                        <a class="page-scroll" target="_blank" href="blog.php">Blog</a>
                     </li>
                 </ul>
             </div>
@@ -171,14 +172,46 @@
         <!-- /.container-fluid -->
     </nav>
 
-    <header>
-        <div class="header-content">
+    <header id="header">
+        <div class="header-content" style="z-index: 1;">
             <div class="header-content-inner">
-                <h1>jHunter</h1>
+                <h1>պատվիրեք վիրտուալ կուրյեր, ցանկացած տեղ ցանկացած ժամի</h1>
                 <hr>
-                <p class="slider-text"><span>Վստահեք մեզ Ձեր փաթեթների, ծրարների <br>եւ փաստաթղթերի փոխադրումը փոխադրումը</span>
-                <a href="javascript:void()" class="btn btn-primary btn-xl page-scroll wow tada" data-toggle="modal" data-target="#online-order"  style="position: relative;top:10px;">Պատվիրեք առաքում հենց հիմա</a>
+
+                <form action="" class="text-center" method="post">
+                    <div class="row">
+                        <div class="col-md-6 text-left">
+                            
+                            <span class="h3">Որտեղից</span><br><br>
+                            <input type="text" required name="from" class="form-control" placeholder="Օր.՝ Ցիտադել բիզնես կենտրոն">
+                        </div>
+                        <div class="col-md-6 text-right">
+                            <span class="h3">Որտեղ</span><br><br>
+                            <input type="text" required name="to" class="form-control" placeholder="Օր.՝ Երազ բիզնես կենտրոն"><br><br>                            
+                        </div>
+                    
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <input type="text" required name="phone" class="form-control" placeholder="Հեռախոսահամար"><br><br>                    
+                        </div>
+                        <div class="col-md-6">
+                            <input type="email" name="email" class="form-control" placeholder="Էլ. հասցե (Ցանկության դեպքում)"><br><br>                    
+                        </div>
+                    </div>
+                    <div class="row">
+                        <span class="h3">Ի՞նչ պետք է առաքել</span><br><br>
+                        <label for="box">Փաթեթ։</label> <input type="checkbox" id="box" name="box">&nbsp
+                        <label for="message">Ծրար։</label> <input type="checkbox" id="message" name="message">&nbsp
+                        <label for="product">Այլ։</label> <input type="checkbox" id="product" name="product">
+                    </div>
+                    <button type="submit" name="submit_question" class="btn btn-primary btn-xl page-scroll wow tada" style="position: relative;top:10px;">Պատվիրեք առաքում հենց հիմա</button>
+                </form>
             </div>
+        </div>
+        <div  style="    position: absolute;top: calc(100% - 278px);text-align: left;left: 0;width: 100%;height: 286px;z-index: 0;background-image: url(img/road.png);background-size: contain;">
+            <img src="img/truck.png" id="truck" style=" position: relative; top: 188px;" width="100px">        
+            <img src="img/moped.png" id="moped" style=" position: relative; top: 202px; float:right" width="80px">        
         </div>
     </header>
 
@@ -191,7 +224,7 @@
                     <p class="text-justify">Մոռացել եք Ձեր իրե՞րը։ Միգուցե պետք է կարճ ժամանակում կարևոր փաստաթղթե՞ր փոխանցել։ Դիմե՛ք մեզ, և մենք կօգնենք Ձեզ, կտեղափոխենք Ձեզ իրերը, կկատարենք ցանկացած առաքում կարճ ժամանակում։</p>                
                     <!--<a href="#" class="btn btn-default btn-xl">Get Started!</a>-->
                     <!-- <strong class="h1">(094) 35 12 32</strong> -->
-                    <a href="javascript:void()" class="btn btn-primary btn-xl page-scroll wow tada" data-toggle="modal" data-target="#online-order"  style="position: relative;top:10px;">Պատվիրեք առաքում հենց հիմա</a>
+                    <a href="#header" class="btn btn-primary btn-xl page-scroll wow tada" style="position: relative;top:10px;">Պատվիրեք առաքում հենց հիմա</a>
                 </div>
             </div>
         </div>
@@ -267,8 +300,7 @@
 
             </div>
             <div class="text-center">
-            <span class="h3">Դուք էլ միացեք նրանց շարքերին<br>եւ</span><br><br>
-                <a href="javascript:void()" class="btn btn-primary btn-xl page-scroll wow tada" data-toggle="modal" data-target="#online-order">պատվիրեք առաքում հենց հիմա</a>                    
+                <a href="#header" class="btn btn-primary btn-xl page-scroll wow tada">պատվիրեք առաքում հենց հիմա</a>                    
             </div>
         </div>
     </section>
@@ -318,9 +350,16 @@
     <!-- Custom Theme JavaScript -->
     <script src="js/creative.js"></script>
     <script>
-        // $(document).ready(function(){
-        //     $("#bonus").modal("show");
-        // });
+        $(document).ready(function(){
+            // var roadAnimation = setInterval(function(){
+                
+            //     var width = $("body").innerWidth();
+
+            //     $("#truck").animate({left: (width - $("#truck").width())}, "linear", 5000);
+
+            // },5000);
+
+        });
 
     </script>
 

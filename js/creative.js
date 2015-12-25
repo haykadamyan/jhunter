@@ -30,8 +30,8 @@
     // Fit Text Plugin for Main Header
     $("h1").fitText(
         1.2, {
-            minFontSize: '35px',
-            maxFontSize: '65px'
+            minFontSize: '15px',
+            maxFontSize: '35px'
         }
     );
 
@@ -76,5 +76,31 @@
     (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter34084805 = new Ya.Metrika({ id:34084805, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true, trackHash:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks");
 
 
+    function traffic(){
+        var width = $("body").innerWidth()
 
+        $("#truck").animate({left: (width + 5)+ "px"}, 8000, function(){
+            $("#truck").css("left",  "-"+$("#truck").width()+"px");
+        });
+        
+        $("#moped").animate({left:  "-" + (width + 5)+ "px"}, 8000, function(){
+            $("#moped").css("left",  $("#moped").width() + "px");
+        });
+
+    }
+
+    traffic();
+    var roadAnimation = setInterval(traffic,8000);
+
+    //Facebook
+
+   
 })(jQuery); // End of use strict
+
+
+
+
+
+
+
+

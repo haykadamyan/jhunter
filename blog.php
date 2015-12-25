@@ -89,25 +89,7 @@
                 </h1>
 
                 <!-- First Blog Post -->
-                <h2>
-                    <a href="post.php">Մասնակցիր եւ շահիր iPhone 6s</a>
-                </h2>
-                <p><span class="glyphicon glyphicon-time"></span> 5.12.2015</p>
-                <hr>
-                <img class="img-responsive" style="width: 200px; float: left; margin-right: 10px;" src="img/iphone.png" alt="">
-                <p>Ամանօրյա տոներին ընդառաջ, jHunter-ը ներկայանում է բում առաջարկով։ Մինչեւ դեկտեմբերի 25-ը <a href="http://thejhunter.com">www.thejhunter.com</a> անհատական վիրտուալ քարտուղարի միջոցով 10 եւ ավելի հարցում ուղարկած հաճախորդները հնարավորություն կունենան մասնակցել նոր iPhone 6s-ի խաղարկության...</p>
-                <a class="btn btn-warning" href="post.php?post_id=1">Կարդալ ավելին<span class="glyphicon glyphicon-chevron-right"></span></a>
-
-                <hr style="clear: both; position:relative; top: 20px;">
-                <!-- Pager -->
-                <ul class="pager" style="margin-top: 50px;">
-                    <li class="previous">
-                        <a href="#">&larr; Older</a>
-                    </li>
-                    <li class="next">
-                        <a href="#">Newer &rarr;</a>
-                    </li>
-                </ul>
+                
 
             </div>
 
