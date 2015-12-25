@@ -39,7 +39,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="jHunter-Անհատական վիրտուալ քարտուղար զբաղված մարդկանց համար որոնց ժամանակը ավելի քիչ է քան առօրյա անելիքները">
-    <meta name="keywords" content="jhunter, jHunter, JHUNTER, քարտուղար, օպերատոր, օգնական, անձնական օգնական, անձնական քարտուղար, անհատական օգնական, անհատական քարտուղար, վիրտուալ քարտուղար, վիրտուալ օգնական, Ձեր անձնական օգնականը, Ձեր անձնական քարտուղարը,օնլայն,օնլայն քարտուղար, օնլայն օգնական, օնլայն անհատական օգնական, օնլայն անհատական քարտուղար, andznakan qartughar, secretary, online, online secretary, online qartughar, online andznakan qartughar, online personal secretary, virtual secretary, անհատական, անհատական քարտուղար, անհատական օգնական">
+    <meta name="keywords" content="jhunter, jHunter, JHUNTER, կուրյեր, առաքիչ, անձնական կուրյեր, անձնական առաքիչ, անհատական կուրյեր, անհատական առաքիչ, վիրտուալ կուրյեր, վիրտուալ առաքիչ, Ձեր անձնական կուրյերը, Ձեր անձնական առաքիչը,օնլայն,օնլայն առաքիչ, օնլայն կուրյեր, օնլայն անհատական առաքրիչ, օնլայն անհատական կուրյեր, andznakan kuryer, courier, online, online courier, online kuryer, online andznakan kuryer, online personal courier, virtual courier,, virtual kuryer, անհատական, անհատական կուրյեր, անհատական առաքիչ">
 
     <title>jHunter-կուրիերային ծառայություն</title>
 
