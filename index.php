@@ -68,7 +68,33 @@
 
 <body id="page-top">
 
+    <div class="popup">
+        <div class="container">
+            <div class="window">
+          <div class="santa">
+            <div class="head">
+              <div class="face">
+                <div class="redhat">
+                  <div class="whitepart"></div>
+                  <div class="redpart"></div>
+                  <div class="hatball"></div>
+                </div>
+                <div class="eyes"></div>
+                <div class="beard">
+                  <div class="nouse"></div>
+                  <div class="mouth"></div>
+                </div>
+              </div>
+              <div class="ears"></div>
+            </div>
+            <div class="body"></div>
+          </div>
+        </div>
 
+        <div class="arrow_box"></div>
+
+        </div>
+    </div>
 
     <div id="bonus" class="modal fade" role="dialog">
         <div class="modal-dialog">
@@ -349,19 +375,7 @@
 
     <!-- Custom Theme JavaScript -->
     <script src="js/creative.js"></script>
-    <script>
-        $(document).ready(function(){
-            // var roadAnimation = setInterval(function(){
-                
-            //     var width = $("body").innerWidth();
-
-            //     $("#truck").animate({left: (width - $("#truck").width())}, "linear", 5000);
-
-            // },5000);
-
-        });
-
-    </script>
+    <script src="js/typed.js"></script>
 
 </body>
 
