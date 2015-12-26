@@ -68,11 +68,8 @@
 
 <body id="page-top">
 
-    <?php
+   
 
-        if(!isset($_POST['submit_question'])){
-            ?>
-                
     <div class="popup">
         <div class="container">
             <div class="window">
@@ -100,11 +97,7 @@
 
         </div>
     </div>
-            <?
-        }
-
-
-    ?>
+       
 
 
     <div id="bonus" class="modal fade" role="dialog">
