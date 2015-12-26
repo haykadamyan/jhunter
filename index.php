@@ -68,6 +68,11 @@
 
 <body id="page-top">
 
+    <?php
+
+        if(!isset($_POST['submit_question'])){
+            ?>
+                
     <div class="popup">
         <div class="container">
             <div class="window">
@@ -95,6 +100,12 @@
 
         </div>
     </div>
+            <?
+        }
+
+
+    ?>
+
 
     <div id="bonus" class="modal fade" role="dialog">
         <div class="modal-dialog">
@@ -231,7 +242,7 @@
                         <label for="message">Ծրար։</label> <input type="checkbox" id="message" name="message">&nbsp
                         <label for="product">Այլ։</label> <input type="checkbox" id="product" name="product">
                     </div>
-                    <button type="submit" name="submit_question" class="btn btn-primary btn-xl page-scroll wow tada" style="position: relative;top:10px;">Պատվիրեք առաքում հենց հիմա</button>
+                    <button type="submit" name="submit_question" class="btn btn-primary btn-xl wow tada" style="position: relative;top:10px;">Պատվիրեք առաքում հենց հիմա</button>
                 </form>
             </div>
         </div>
