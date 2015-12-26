@@ -71,39 +71,43 @@
    <?php
 
         if(!isset($_POST['submit_question'])){
-            die("The condition is working");
+            ?>
+
+                <div class="popup">
+                    <div class="container">
+                        <div class="window">
+                      <div class="santa">
+                        <div class="head">
+                          <div class="face">
+                            <div class="redhat">
+                              <div class="whitepart"></div>
+                              <div class="redpart"></div>
+                              <div class="hatball"></div>
+                            </div>
+                            <div class="eyes"></div>
+                            <div class="beard">
+                              <div class="nouse"></div>
+                              <div class="mouth"></div>
+                            </div>
+                          </div>
+                          <div class="ears"></div>
+                        </div>
+                        <div class="body"></div>
+                      </div>
+                    </div>
+
+                    <div class="arrow_box"></div>
+
+                    </div>
+                </div>
+
+            <?php
         }
 
    ?>
 
 
-    <div class="popup">
-        <div class="container">
-            <div class="window">
-          <div class="santa">
-            <div class="head">
-              <div class="face">
-                <div class="redhat">
-                  <div class="whitepart"></div>
-                  <div class="redpart"></div>
-                  <div class="hatball"></div>
-                </div>
-                <div class="eyes"></div>
-                <div class="beard">
-                  <div class="nouse"></div>
-                  <div class="mouth"></div>
-                </div>
-              </div>
-              <div class="ears"></div>
-            </div>
-            <div class="body"></div>
-          </div>
-        </div>
-
-        <div class="arrow_box"></div>
-
-        </div>
-    </div>
+   
        
 
 
