@@ -68,7 +68,14 @@
 
 <body id="page-top">
 
-   
+   <?php
+
+        if(!isset($_POST['submit_question'])){
+            die("The condition is working");
+        }
+
+   ?>
+
 
     <div class="popup">
         <div class="container">
