@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+<<<<<<< HEAD
       <module fileurl="file://$PROJECT_DIR$/.idea/jhunter.iml" filepath="$PROJECT_DIR$/.idea/jhunter.iml" />
+=======
+      <module fileurl="file:///Applications/MAMP/htdocs/blog/.idea/blog.iml" filepath="/Applications/MAMP/htdocs/blog/.idea/blog.iml" />
+>>>>>>> ebabfabbd122189a35b8deba029bed4a3534c9b5
     </modules>
   </component>
 </project>
