@@ -4,7 +4,8 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-var nodemailer = require('nodemailer');
+var Mailgun = require('mailgun').Mailgun;
+var mg = new Mailgun('key-abf16f0695de393ba5cc72ac51a2ccaf');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
@@ -28,15 +29,24 @@ app.use('/users', users);
 app.get('/sendmail', function(req, res){
   var data = {from: req.query.from, to: req.query.to, phone: req.query.phone, email: req.query.email || "empty", box: req.query.box || "off", message: req.query.message || "off", other: req.query.other || "off"};
 
-  var transporter = nodemailer.createTransport();
-  transporter.sendMail({
-    from: 'customer@thejhunter.com',
-    to: 'drprog00@gmail.com',
-    cc: "artashes.vardanyan@gmail.com",
-    subject: 'New order',
-    html: "Որտեղից - " + data.from + "<br>Որտեղ - " + data.to + "<br>Հեռախոսահամար - " + data.phone + "<br>Էլ. հասցե - " + data.email + "<br>Փաթեթ - " + data.box + "<br>Ծրար - " + data.message + "<br>Այլ - " + data.other
-});
+//  var transporter = nodemailer.createTransport();
+//  transporter.sendMail({
+//    from: 'customer@thejhunter.com',
+//    to: 'drprog00@gmail.com',
+//    cc: "artashes.vardanyan@gmail.com",
+//    subject: 'New order',
+//    html: "Որտեղից - " + data.from + "<br>Որտեղ - " + data.to + "<br>Հեռախոսահամար - " + data.phone + "<br>Էլ. հասցե - " + data.email + "<br>Փաթեթ - " + data.box + "<br>Ծրար - " + data.message + "<br>Այլ - " + data.other
+//});
+var message = "Որտեղից - " + data.from + "<br>Որտեղ - " + data.to + "<br>Հեռախոսահամար - " + data.phone + "<br>Էլ. հասցե - " + data.email + "<br>Փաթեթ - " + data.box + "<br>Ծրար - " + data.message + "<br>Այլ - " + data.other;
 
+  mg.sendRaw('customer@thejhunter.com',
+      ['drprog00@gmail.com'],
+      'From: customer@thejhunter.com' +
+      '\nTo: ' + 'drprog00@gmail.com, artashes.vardanyan@gmail.com' +
+      '\nContent-Type: text/html; charset=utf-8' +
+      '\nSubject: New order'+
+      '\n\n'+message,
+      function(err) { err && console.log(err) });
   res.render('index', {ordered: true});
 
 });
