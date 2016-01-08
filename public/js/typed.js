@@ -35,7 +35,7 @@
         this.options = $.extend({}, $.fn.typed.defaults, options);
 
         // text content of element
-        this.text = this.el.text();
+        this.text = this.el.html();
 
         // typing speed
         this.typeSpeed = this.options.typeSpeed;
@@ -168,7 +168,7 @@
 
                            // start typing each new char into existing string
                            // curString: arg, self.text: original text inside element
-                           self.el.text(self.text + curString.substr(0, curStrPos+1));
+                           self.el.html(self.text + curString.substr(0, curStrPos+1));
 
                            // add characters one by one
                            curStrPos++;

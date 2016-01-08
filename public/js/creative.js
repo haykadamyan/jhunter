@@ -118,15 +118,15 @@
     var roadAnimation = setInterval(traffic,8000);
 
      $(function(){
-                  $(".arrow_box").typed({
+                  $(".arrow-text").typed({
                     strings: ["Ամանօրյա տոներին ընդառաջ, jHunter-ը ներկայանում է աննախադեպ առաջարկով։ Մինչը հունվարի 15-ը բոլոր պատվիրատուները կստանան 1 անգամյա անվճար առաքում։"],
                     typeSpeed: 0,
-                    startDelay: "1000"
+                    startDelay: "1000",
                   });
      });
 
-     $(".popup").click(function(){
-        $(this).hide();
+     $(document).on("click",".close-popup",function(){
+        $(".popup").hide()
      })
 
     //Facebook
