@@ -132,21 +132,22 @@
     //Form validation
 
     $("#sendmail").submit(function(e){
-        $("#sendmail").find(".required").each(function(){
+        $("#sendmail").find("input:lt(3)").each(function(){
            if($(this).val() == "" || $(this).val() == undefined || $(this).val() == null){
                $(this).css("border","1px solid red");
                e.preventDefault();
            }
+           if(!$(this).hasClass("required")){
+               e.preventDefault();
+               alert("Ծրագրային կոդը փոխվել է");
+               location.reload();
+           }
         });
+
     });
 
     $("#sendmail").find(".required").keydown(function(){
         $(this).css("border","none")
-    });
-
-    $("#sendmail").bind("DOMSubtreeModified", function(e) {
-        alert("tree changed");
-        location.reload();
     });
 
 
