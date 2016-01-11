@@ -129,7 +129,27 @@
         $(".popup").hide()
      })
 
-    //Facebook
+    //Form validation
+
+    $("#sendmail").submit(function(e){
+        $("#sendmail").find(".required").each(function(){
+           if($(this).val() == "" || $(this).val() == undefined || $(this).val() == null){
+               $(this).css("border","1px solid red");
+               e.preventDefault();
+           }
+        });
+    });
+
+    $("#sendmail").find(".required").keydown(function(){
+        $(this).css("border","none")
+    });
+
+    $("#sendmail").bind("DOMSubtreeModified", function(e) {
+        alert("tree changed");
+        location.reload();
+    });
+
+
 
    
 })(jQuery); // End of use strict
