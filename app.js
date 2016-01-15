@@ -40,7 +40,7 @@ app.get('/sendmail', function(req, res){
 var message = "Որտեղից - " + data.from + "<br>Որտեղ - " + data.to + "<br>Հեռախոսահամար - " + data.phone + "<br>Էլ. հասցե - " + data.email + "<br>Փաթեթ - " + data.box + "<br>Ծրար - " + data.message + "<br>Այլ - " + data.other;
 
   mg.sendRaw('customer@thejhunter.com',
-      ['drprog00@gmail.com'],
+      ['drprog00@gmail.com', "artashes.vardanyan@gmail.com"],
       'From: customer@thejhunter.com' +
       '\nTo: ' + 'drprog00@gmail.com, artashes.vardanyan@gmail.com' +
       '\nContent-Type: text/html; charset=utf-8' +
