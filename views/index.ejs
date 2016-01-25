@@ -38,40 +38,23 @@
 <body id="page-top">
 
 
-    <!--<%  if(!ordered){%>-->
+    <%  if(!ordered){%>
 
-    <!--<div class="popup">-->
-        <!--<div class="container">-->
-            <!--<div class="window">-->
-          <!--<div class="santa">-->
-            <!--<div class="head">-->
-              <!--<div class="face">-->
-                <!--<div class="redhat">-->
-                  <!--<div class="whitepart"></div>-->
-                  <!--<div class="redpart"></div>-->
-                  <!--<div class="hatball"></div>-->
-                <!--</div>-->
-                <!--<div class="eyes"></div>-->
-                <!--<div class="beard">-->
-                  <!--<div class="nouse"></div>-->
-                  <!--<div class="mouth"></div>-->
-                <!--</div>-->
-              <!--</div>-->
-              <!--<div class="ears"></div>-->
-            <!--</div>-->
-            <!--<div class="body"></div>-->
-          <!--</div>-->
-        <!--</div>-->
+    <div class="popup">
+        <div class="container">
+            <div class="window">
+                <img src="img/delivery_man.png" style="position:relative; top: 50px;">
+            </div>
 
-        <!--<div class="arrow_box">-->
-            <!--<div class="pull-right close-popup" style="cursor: pointer;position: relative;top: -15px;left: 7px;"><i class="fa fa-close"></i></div>-->
-            <!--<div class="arrow-text"></div>-->
-        <!--</div>-->
+        <div class="arrow_box">
+            <div class="pull-right close-popup" style="cursor: pointer;position: relative;top: -15px;left: 7px;"><i class="fa fa-close"></i></div>
+            <div class="arrow-text" style="height:200px"></div>
+        </div>
 
-        <!--</div>-->
-    <!--</div>-->
+        </div>
+    </div>
 
-    <!--<%}%>-->
+    <%}%>
 
 
    
@@ -102,7 +85,7 @@
         </div>
     </div>
 
-  <!-- <div id="online-order" class="modal fade" role="dialog">
+  <div id="online-order" class="modal fade" role="dialog">
         <div class="modal-dialog">
 
             <div class="modal-content">
@@ -111,27 +94,32 @@
                     <h4 class="modal-title">Պատվիրեք առաքում հենց հիմա</h4>
                 </div>
                 <div class="modal-body">
-                    <form action="" class="form-inline text-center" method="post">
+                    <form action="/sendmail" class="text-center" method="get">
                         <div class="row">
-                            <div class="col-md-5 text-left">
+                            <div class="col-md-6 text-left">
+
                                 <span class="h3">Որտեղից</span><br><br>
-                                <input type="text" required name="from" class="form-control" placeholder="Օր.՝ Ցիտադել բիզնես կենտրոն">
+                                <input type="text" required name="from" class="form-control required" placeholder="Օր.՝ Ցիտադել բիզնես կենտրոն">
                             </div>
-                            <div class="col-md-2 text-center">
-                                <br><br><hr>
-                            </div>
-                            <div class="col-md-5 text-right">
+                            <div class="col-md-6 text-right">
                                 <span class="h3">Որտեղ</span><br><br>
-                                <input type="text" required name="to" class="form-control" placeholder="Օր.՝ Երազ բիզնես կենտրոն"><br><br>                            
+                                <input type="text" required name="to" class="form-control required" placeholder="Օր.՝ Երազ բիզնես կենտրոն"><br><br>
                             </div>
-                        
+
                         </div>
-                        <input type="text" required name="phone" class="form-control" placeholder="Հեռախոսահամար"><br><br>
+                        <div class="row">
+                            <div class="col-md-6 text-left">
+                                <input type="text" required name="phone" class="form-control required" placeholder="Հեռախոսահամար"><br><br>
+                            </div>
+                            <div class="col-md-6 text-right">
+                                <input type="email" name="email" class="form-control" placeholder="Էլ. հասցե (Ցանկության դեպքում)"><br><br>
+                            </div>
+                        </div>
                         <div class="row">
                             <span class="h3">Ի՞նչ պետք է առաքել</span><br><br>
                             <label for="box">Փաթեթ։</label> <input type="checkbox" id="box" name="box">&nbsp
                             <label for="message">Ծրար։</label> <input type="checkbox" id="message" name="message">&nbsp
-                            <label for="product">Այլ։</label> <input type="checkbox" id="product" name="product">
+                            <label for="product">Այլ։</label> <input type="checkbox" id="product" name="other">
                         </div>
                         <div class="text-right modal-footer" style="margin-top: 20px">
                             <button type="submit" name="submit_question" class="btn btn-warning">Ուղարկել</button>
@@ -143,7 +131,7 @@
             </div>
 
         </div>
-    </div> --> 
+    </div>
 
     <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid" >
@@ -169,9 +157,6 @@
                     </li>
                     <li>
                         <a class="page-scroll" href="#portfolio" style="background-color: white; color: #F05F40;">Մեր հաճախորդները սիրում են մեզ</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" target="_blank" href="blog.php">Blog</a>
                     </li>
                 </ul>
             </div>
@@ -229,11 +214,10 @@
                 <div class="col-lg-8 col-lg-offset-2 text-center">
                     <h2 class="section-heading">Մեր մասին</h2>
                     <hr class="light">
-                    <p class="text-justify">Մոռացել եք Ձեր իրե՞րը։ Միգուցե պետք է կարճ ժամանակում կարևոր փաստաթղթե՞ր փոխանցել։ Դիմե՛ք մեզ, և մենք կօգնենք Ձեզ, կտեղափոխենք Ձեզ իրերը, կկատարենք ցանկացած առաքում կարճ ժամանակում։</p>                
+                    <p class="text-justify">Մոռացել եք Ձեր իրե՞րը։ Միգուցե պետք է կարճ ժամանակում կարևոր իրեր տեղափոխել։ Դիմե՛ք մեզ, և մենք կօգնենք Ձեզ, կտեղափոխենք Ձեզ իրերը, կկատարենք ցանկացած առաքում կարճ ժամանակում։</p>
                     <!--<a href="#" class="btn btn-default btn-xl">Get Started!</a>-->
                     <!-- <strong class="h1">(094) 35 12 32</strong> -->
-                    <a href="#header" class="btn btn-primary btn-xl page-scroll wow tada" style="position: relative;top:10px;">Պատվիրեք առաքում հենց հիմա</a>
-                </div>
+                    </div>
             </div>
         </div>
     </section>
@@ -308,7 +292,7 @@
 
             </div>
             <div class="text-center">
-                <a href="#header" class="btn btn-primary btn-xl page-scroll wow tada">պատվիրեք առաքում հենց հիմա</a>                    
+                <a href="javascript:void()" class="btn btn-primary btn-xl page-scroll wow tada" data-toggle="modal" data-target="#online-order">պատվիրեք առաքում հենց հիմա</a>
             </div>
         </div>
     </section>
