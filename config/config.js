@@ -3,5 +3,5 @@
      app: {
          name: 'jhunter'
      },
-     port: process.env.port,
+     port: 80,
  }
